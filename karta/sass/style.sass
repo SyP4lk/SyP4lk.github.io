@@ -7,7 +7,8 @@
     background: url(../img/Карта1.png)
     height: 500px
     position: relative
-    max-width: 800px
+    width: 800px
+    background-repeat: no-repeat
     background-position: center
     background-size: 100%
     &__active
@@ -21,10 +22,11 @@
 
 
 #tolyati
-    top: 305px
-    left: 167px
+    top: 303px
+    left: 21%
     &:hover
         &::before
+            animation: pulse 1s
             content: ""
             width: 200px
             position: absolute
@@ -38,6 +40,7 @@
     left: 173px
     &:hover
         &::before
+            animation: pulse 1s
             content: ""
             width: 200px
             position: absolute
@@ -51,6 +54,7 @@
     left: 241px
     &:hover
         &::before
+            animation: pulse 1s
             content: ""
             width: 200px
             position: absolute
@@ -59,3 +63,14 @@
             background-image: url(../img/Всплывашка_2.png)
             background-size: cover
             height: 100px
+            
+            
+
+@keyframes pulse 
+    0%
+        width: 0
+        height: 0
+    100%
+        width: 200px
+        height: 100px
+
