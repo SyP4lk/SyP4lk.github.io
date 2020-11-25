@@ -1,0 +1,57 @@
+*
+    margin: 0
+    padding: 0
+
+.not_clicked
+    &:nth-child(1)
+        display: block
+        transition-duration: 1s
+    &:nth-child(2)
+        margin-top: 2
+        transition-duration: 1s
+        transform: rotate(0deg)
+        position: static
+        top: 0
+    &:nth-child(3)
+        margin-top: 2
+        transition-duration: 1s
+        transform: rotate(0deg)
+
+
+.clicked
+    &:nth-child(1)
+        display: none
+    &:nth-child(2)
+        margin-top: 0
+        transition-duration: 1s
+        transform: rotate(-45deg)
+        position: absolute
+        top: 0
+    &:nth-child(3)
+        margin-top: 0
+        transition-duration: 1s
+        transform: rotate(45deg)
+        
+.menuActive
+    left: 0vw
+    transition-duration: 1s
+
+.menuNotActive
+    left: 100vw
+    transition-duration: 1s
+
+@media screen and ( max-width: 455px )
+    .menuActive
+        left: -10vw
+
+@media screen and ( max-width: 386px )
+    .menuActive
+        left: -30vw
+        
+    
+
+@import block/_header
+@import block/_thisIs
+@import block/_details
+@import block/_team
+@import block/_menuHiden

@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'AdobeGothicStd';
+	src: url('AdobeGothicStd.otf');
+	src: local('AdobeGothicStd'),
+		url('AdobeGothicStd.eot?#iefix') format('embedded-opentype'),
+		url('AdobeGothicStd.woff') format('woff'),
+		url('AdobeGothicStd.ttf') format('truetype');
+}

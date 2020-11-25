@@ -1,0 +1,120 @@
+.header
+    width: 100%
+    min-height: 737px
+    padding-top: 47px
+    min-height: 737px
+    background: transparent
+    &__head
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        align-items: center
+        max-width: 1169px
+    &__menu
+        width: 527px
+        color: #ffffff
+        font-family: 'Open Sans', sans-serif
+        font-size: 16px
+        display: flex
+        justify-content: space-between
+        a
+            color: #ffffff
+            text-decoration: none
+            text-align: center
+            &::after
+                background-color: #19BD9A
+                display: block
+                content: ""
+                height: 3px
+                width: 0%
+                -webkit-transition: width .3s ease-in-out
+                -moz--transition: width .3s ease-in-out
+                transition: width .3s ease-in-out
+            &:hover
+                &::after
+                    width: 100%
+        li
+            list-style: none
+    &__hiden
+        display: none
+        width: 100%
+        position: relative
+        height: 50px
+        z-index: 1000000000001
+        color: #ffffff
+        font-family: 'Open Sans', sans-serif
+        font-size: 16px
+        justify-content: space-around
+        align-items: center
+        background-color: rgba(25,189,154, .6)
+        a
+            color: #ffffff
+            text-align: center
+            text-decoration: none
+        li
+            list-style: none
+    &__descr
+        text-align: center
+        color: #ffffff
+        margin-top: 221px
+        h1
+            font-family: 'Source Sans Pro', sans-serif
+            letter-spacing: 7px
+            text-transform: uppercase
+            font-size: 35px
+            font-weight: 200
+        p
+            font-family: OpenSans
+            letter-spacing: 0.8px
+            margin-top: 43px
+            font-size: 16px
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        margin-top: 200px
+        border-radius: 50%
+        &:hover
+            width: 36px
+            height: 36px
+            background-color: #19bd9a
+            transition-duration: 1s
+    &__burger
+        width: 20px
+        position: relative
+        height: 20px
+        cursor: pointer
+        display: none
+        z-index: 10000001
+        div
+            width: 30px
+            height: 3px
+            margin-top: 2px
+            background-color: #000000    
+
+@media ( max-width: 1200px )
+    .header
+        &__head
+            max-width: 960px
+@media ( max-width: 992px )
+    .header
+        &__head
+            max-width: 700px     
+@media ( max-width: 726px )
+    .header
+        &__head
+            flex-direction: column
+            max-width: 700px      
+        &__menu
+            margin-top: 20px   
+@media ( max-width: 536px )
+    .header
+        &__head
+            flex-direction: row
+            justify-content: space-around
+            max-width: 700px      
+        &__menu
+            display: none
+        &__burger
+            display: block    

@@ -1,0 +1,31 @@
+*
+    font-family: 'Roboto', sans-serif;
+
+.fixed
+    overflow: hidden
+
+body
+    margin: 0
+    padding: 0
+    z-index: 1
+
+@import block/_haeder
+@import block/_spaceMenu
+@import block/_menu
+@import block/_banner
+@import block/_catalog
+@import block/_partners
+@import block/_Recommendations
+@import block/_form
+@import block/_info
+@import block/_footer
+
+
+@media  ( max-width: 1106px )
+    .menu__fixed
+        display: none
+    .menu__drops_fixed
+        display: none
+    .menus__drops_fixed
+        display: block
+    

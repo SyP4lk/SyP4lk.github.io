@@ -1,0 +1,147 @@
+.mainFilm
+    position: relative
+    width: 100%
+    height: 700px
+    overflow: hidden
+    &__bg
+        width: 100%
+        height: 700px
+        transition: all 1s ease-out
+        &:hover
+            transform: scale(1.1)
+            z-index: -1
+    &__logo
+        img
+            position: absolute
+            width: 426px
+            height: 300px
+            left: 200%
+            bottom: 40%
+            z-index: 1
+        button
+            position: absolute
+            left: 100%
+            bottom: 40%
+            width: 118px
+            height: 38px
+            border-radius: 5px
+            background-color: #d8232a
+            font-size: 14px
+            font-weight: bold
+            font-stretch: normal
+            font-style: normal
+            letter-spacing: normal
+            text-align: center
+            text-transform: uppercase
+            outline: none
+            border-width: 0
+            color: #ffffff
+            z-index: 1
+    &__actors
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: absolute
+        z-index: 1
+        bottom: 50%
+        .circle
+            width: 10px
+            margin-bottom: 5px
+            height: 10px
+            background: #ffffff
+            border-radius: 50%
+            margin-left: 10px
+        .circle1
+            &:hover
+                width: 30px
+                height: 30px
+                background: url(../../img/actors1.png)
+                transition-duration: 0.1s
+    &__footer
+        position: absolute
+        display: none
+        bottom: 0
+        width: 100%
+        height: 50px
+        background-color: rgba(5, 5, 5, .65)
+        z-index: 1
+    &__published
+        font-size: 14px
+        font-weight: bold
+        color: #ffffff
+        text-transform: uppercase
+        span
+            font-family: Calibri
+            font-size: 16px
+            font-weight: normal
+            font-stretch: normal
+            font-style: normal
+            line-height: normal
+            letter-spacing: normal
+            text-align: left
+            color: #d8232a
+    &__update
+        font-size: 14px
+        font-weight: bold
+        color: #ffffff
+        text-transform: uppercase
+        margin-left: 28px
+        span
+            font-family: Calibri
+            font-size: 16px
+            font-weight: normal
+            font-stretch: normal
+            font-style: normal
+            line-height: normal
+            letter-spacing: normal
+            text-align: left
+            color: #d8232a
+    &__info
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 18px 0 18px 33px
+
+@media ( max-width: 1100px)
+    .mainFilm
+        &__logo
+            img
+                width: 300px
+                height: 200px
+@media ( max-width: 534px )
+    .mainFilm
+        &__bg
+            position: absolute
+            width: 1000px
+            left: -100%
+        &__logo
+            img
+                display: none
+                left: 5%
+            button
+                display: none
+                left: 30%
+        &__info
+            margin: 18px 0 18px 0px
+        &__published
+            font-size: 10px
+            span
+                font-size: 12px
+        &__update
+            font-size: 10px
+            span
+                font-size: 12px
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

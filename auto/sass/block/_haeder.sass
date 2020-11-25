@@ -1,0 +1,181 @@
+.header
+    display: flex
+    max-width: 1384px
+    margin: 0 auto
+    position: relative
+    align-items: flex-start
+    margin-top: 28px
+    justify-content: space-between
+    &__logo
+        width: 332px
+        height: 53px
+        z-index: 1
+    &__adress
+        width: 200px
+        p
+            font-family: Roboto
+            font-size: 12px
+            text-align: left
+            color: #606060
+        &_nav
+            font-style: italic
+            font-size: 12px
+            text-transform: uppercase
+            display: flex
+            align-items: center
+            a
+                margin-left: 11px
+    &__time
+        font-size: 12px
+        line-height: 0
+        text-align: left
+        color: #606060
+        margin-top: 5px
+        width: 122px
+        height: 29px
+    &__social
+        margin-top: 10px
+        &_inst
+            width: 34px
+            height: 34px
+    &__tel
+        margin-top: 15px
+        a
+            font-size: 18px
+            text-align: left
+            color: #000000
+            text-decoration: none
+    &__but
+        width: 156px
+        color: #ffffff
+        border: none
+        background-color: #818181
+        height: 44px
+        cursor: pointer
+        font-size: 12px
+        margin-top: 5px
+        text-transform: uppercase
+    &__burger
+        width: 30px
+        display: none
+        cursor: pointer
+        height: 30px
+        div
+            background-color: black
+            width: 30px
+            height: 3px
+            margin-bottom: 2px
+    &__fixed
+        position: fixed
+        width: 100%
+        left: 0
+        top: 0
+        height: 70px
+        justify-content: space-between
+        z-index: 20
+        align-items: center
+        display: none
+        background-color: #006ebd
+        &_wrap
+            align-items: center
+            display: flex
+            justify-content: center
+            margin-right: 20px
+            .header
+                &__but
+                    width: 156px
+                    height: 20px
+                    color: #ffffff
+                    margin-left: 20px
+                    border-left: 1px solid #ffffff
+                    background-color: rgba(255,255,255,0)
+                    cursor: pointer
+                &__tel
+                    width: 156px
+                    border-left: 1px solid #ffffff
+                    a
+                        font-size: 14px
+                        text-align: left
+                        color: #ffffff
+                        margin-left: 20px
+                        text-decoration: none
+                &__adress
+                    width: 300px
+                    
+                    p
+                        margin-top: 13px
+                        font-family: Roboto
+                        font-size: 14px
+                        text-align: left
+                        color: #ffffff
+.header__fixed
+    font-size: 14px
+    .header__logo
+        margin-left: 200px
+        margin-top: 16px
+    .header__fixed_wrap
+        margin-right: 100px
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+    .header__but
+        text-transform: uppercase
+        margin-top: 14px
+    .header__tel
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 20px
+    .header__adress
+        margin-top: 2px
+    .header__burger
+        display: none
+
+
+@media ( max-width: 1106px )
+    .header
+        justify-content: space-around
+        &__adress
+            display: none
+        &__time
+            display: none
+        &__social
+            display: none
+            &_1
+                display: block
+        &__tel
+            display: none
+        &__but
+            display: none
+        &__fixed
+            display: none
+    .header__fixed
+        display: none
+
+@media ( max-width: 980px )
+    .header
+        &__burger
+            display: block
+    .header__fixed
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 100vw
+        .header__fixed_wrap
+            display: none
+        .header__logo
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-top: 0
+            margin-left: 0
+        .header__burger
+            margin-top: 25px
+            display: block
+    
+@media ( max-width: 460px )
+    .header
+        &__logo
+            img
+                width: 250px
+                height: 50px

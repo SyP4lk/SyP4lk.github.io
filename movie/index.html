@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="css/fontstye.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fakeLoader.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="fakeLoader"></div>
+    <div class="header">
+        <img src="icons/logo.png" alt="logo" class="header__logo"> 
+        <div class="header__nav"> 
+            <img src="icons/comics.png" alt="" class="header__nav">
+            <img src="icons/video.png" alt="" class="header__nav">
+            <img src="icons/movie icon.png" alt="" class="header__nav">
+            <img src="icons/game.png" alt="" class="header__nav">
+            <img src="icons/tv.png" alt="" class="header__nav">
+            <img src="icons/more.png" alt="" class="header__nav">
+        </div>
+        <div class="header__profile">
+            <img src="icons/user_photo.png" alt="" class="header__profile-photo">
+            <div class="header__profile-name">Carol Danvers</div>
+            <img src="icons/edit profile.png" alt="" class="header__profile-edit">
+        </div>
+    </div>
+
+    <div class="mainFilm">
+
+
+        <div class="mainFilm__logo">
+            <img src="img/main_movie_logo.png" alt="" class="mainFilm_img">
+            <button class="button" id="mainFilm_button">Watch now</button>
+        </div>
+
+        <div class="mainFilm__actors">
+            <div class="circle circle1"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+
+        <div class="mainFilm__footer">
+            <div class="mainFilm__info">
+                <div class="mainFilm__published">Published <span>Feb 20, 2014</span></div>
+                <div class="mainFilm__update">Updated <span>Feb 20, 2014</span></div>
+            </div>
+        </div>
+
+        <img src="img/bg.jpg" alt="" class="mainFilm__bg">
+    </div>
+
+    <div class="movies">
+        <div class="movies__header">
+            <div class="movies__descr">FEATURED MOVIES</div>
+            <div class="movies__tabs">
+                <div class="movies__realised active">New Realised</div>
+                <span> / </span>
+                <div class="movies__trailers">railers & Clips</div>
+            </div>
+            <form class="movies__search" action="" method="get">
+                <input class="movies__input" name="s" placeholder="Search..." type="search">
+                <button class="movies__icon" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <div class="movies__wrapper">
+            <div class="movies__content">
+                <div class="info" id="guardian_info">
+                    <div class="guardian__raiting">
+                        <div id="guardian_info_like">
+                            <img src="icons/like.png" alt="">
+                            <span class="info__score">3,545</span>
+                        </div>
+                        <div id="guardian_info_comments">
+                            <img src="icons/comments.png" alt="">
+                            <span class="info__score">58</span>
+                        </div>
+                        <div id="guardian_info_download">
+                            <img src="icons/downloads_red.png" alt="">
+                            <span class="info__score">642</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movies__main" id="guardian">
+                    <div class="movies__head">
+                        <div id="guardian__like">
+                            <img src="icons/like.png" alt="">
+                            <span id="guardian__score">3,545</span>
+                        </div>
+                        <div id="guardian__download"><img src="icons/download.png" alt=""></div>
+                    </div>
+                    <div id="guardian__name">Guardians of the Galaxy</div>
+                </div>
+            </div>
+    
+            <div class="movies__content">
+                <div class="info" id="spider_info">
+                    <div class="info__raiting">
+                        <div id="spider_info_like">
+                            <img src="icons/like.png" alt="">
+                            <span class="info__score">3,545</span>
+                        </div>
+                        <div id="spider_info_comments">
+                            <img src="icons/comments.png" alt="">
+                            <span class="info__score">58</span>
+                        </div>
+                        <div id="spider_info_download">
+                            <img src="icons/downloads_red.png" alt="">
+                            <span class="info__score">642</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="movies__main" id="spider">
+                    <div class="movies__head">
+                        <div id="spider__like">
+                            <img src="icons/like.png" alt="">
+                            <span id="spider__score">3,545</span>
+                        </div>
+                        <div id="spider__download"><img src="icons/download.png" alt=""></div>
+                    </div>
+                    <div id="spider__name">The Amazing Spider-Man 2</div>
+                </div>
+            </div>
+        </div>
+    
+        
+    </div>
+    
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/fakeLoader.js"></script>
+    <script src="js/scritp.js"></script>
+</body>
+</html>

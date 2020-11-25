@@ -1,0 +1,96 @@
+.info
+    position: relative
+    z-index: 3
+    padding-top: 91px
+    padding-bottom: 101px
+    width: 100%
+    background-color: rgba(255,255,255,.95)
+    &__1
+        width: 584px
+    &__2
+        width: 500px
+        text-align: left
+        display: flex
+        margin-left: 100px
+        justify-content: flex-start
+        align-items: flex-start
+        flex-direction: column
+    hr
+        width: 66px
+        height: 3px
+        background-color: #006ebd
+        margin-left: 0
+        margin-top: 17px
+        margin-bottom: 10px
+    &__wrap
+        max-width: 1100px
+        margin: 0 auto
+        display: flex 
+        align-items: center
+        justify-content: space-around
+    &__subname
+        font-size: 14px
+        letter-spacing: 0.35px
+        text-align: left
+        color: #3b4652
+    &__descr
+        font-size: 15px
+        line-height: 1.33
+        text-align: left
+        color: #000000
+        text-align: justify
+        span
+            margin-left: 30px
+    &__header
+        text-align: left
+        color: #000000
+        font-weight: bold
+        font-size: 18px
+        margin-bottom: 10px   
+        &:nth-child(1)
+            text-transform: uppercase
+    &__name
+        font-size: 24px
+        text-align: left
+        color: #3b4652
+        text-transform: uppercase
+    &__btn
+        width: 156px
+        height: 44px
+        position: relative
+        background-color: #006ebd
+        border: none
+        cursor: pointer
+        font-size: 10px
+        color: #ffffff
+        &::after
+            content: url(../img/form/arrow1.png)
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 31px
+            height: 31px
+            background-color: #818181
+            position: absolute
+            left: 140px
+            top: 20px
+@media  ( max-width: 981px )
+    .info
+        &__wrap
+            flex-direction: column
+@media  ( max-width: 592px )
+    .info
+        &__wrap
+            width: 100%
+            flex-direction: column
+        &__1
+            width: 80%
+        &__2
+            width: 80%
+            justify-content: center
+            align-items: center
+        hr
+            margin: 0 auto
+    
+
+    

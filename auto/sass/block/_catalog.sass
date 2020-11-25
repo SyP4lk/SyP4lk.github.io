@@ -1,0 +1,74 @@
+.catalog
+    margin-top: 31px
+    max-width: 1862px
+    display: flex
+    margin: 31px auto
+    justify-content: space-around
+    align-items: flex-start
+    &__img
+        display: flex
+        position: relative
+        z-index: 0
+        flex-direction: column
+        overflow: hidden
+        cursor: pointer
+        margin-bottom: 30px
+        img
+            transition: 1s
+            &:hover
+                 transform: scale(1.2)
+    &__text
+        position: absolute
+        color: #ffffff
+        z-index: 1
+        top: 30%
+        line-height: 1.33
+        font-weight: 300
+        left: 40px
+    &__head
+        font-size: 36px
+        text-transform: uppercase
+        text-align: left
+    &__descr    
+        font-size: 24px
+    &__1
+        max-width: 35%
+    &__2
+        max-width: 27%
+    &__3
+        max-width: 35%
+
+
+#center_img
+    height: 867px
+    .catalog__text
+        top: 65%
+        text-transform: uppercase
+@media ( max-width: 745px )
+    .catalog
+        &__text
+            left: 5px
+        &__head
+            font-size: 18px
+        &__descr    
+            font-size: 15px
+
+@media ( max-width: 600px )
+    .catalog
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        &__img
+            width: 100%
+        &__1
+            max-width: 100%
+        &__2
+            max-width: 100%
+        &__3
+            max-width: 100%
+
+
+@media ( max-width: 340px )
+    .catalog
+        &__text
+            left: 40px
