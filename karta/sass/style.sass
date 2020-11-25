@@ -7,7 +7,7 @@
     background: url(../img/Карта1.png)
     height: 500px
     position: relative
-    width: 800px
+    max-width: 800px
     background-repeat: no-repeat
     background-position: center
     background-size: 100%
@@ -69,8 +69,15 @@
 @keyframes pulse 
     0%
         width: 0
-        height: 0
     100%
         width: 200px
-        height: 100px
 
+@media (max-width: 546px)
+    .karta
+        &__active
+            width: 5px
+            height: 5px
+            border-radius: 50%
+            border: 1px solid #DABD6D
+            box-shadow: 0 0 2px 2px #dabd6d
+            cursor: pointer
