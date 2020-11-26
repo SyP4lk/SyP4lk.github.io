@@ -20,6 +20,16 @@
         border: 1px solid #DABD6D
         box-shadow: 0 0 2px 2px #dabd6d
         cursor: pointer
+        background-color: #00007A
+    &__not-active
+        width: 10px
+        position: absolute
+        height: 10px
+        border-radius: 50%
+        border: 1px solid #393177
+        box-shadow: 0 0 2px 2px #7066b8
+        background-color: #00007A
+        cursor: pointer
 
 
 #tolyati
@@ -76,8 +86,180 @@
             background-size: cover
             height: 100px
             
-            
+#newKub
+    top: 350px
+    left: 153px
+    &:hover
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_3.png)
+            background-size: cover
+            height: 100px
+    &:focus
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_3.png)
+            background-size: cover
+            height: 100px           
 
+#newRos
+    top: 362px
+    box-shadow: 0 0 1px 2px #ffdb77
+    left: 53px
+    &:hover
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_5.png)
+            background-size: cover
+            height: 100px
+    &:focus
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_5.png)
+            background-size: cover
+            height: 100px   
+#gelendgik
+    top: 380px
+    box-shadow: 0 0 1px 2px #ffdb77
+    left: 53px
+    &:hover
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_5.png)
+            background-size: cover
+            height: 100px
+    &:focus
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_5.png)
+            background-size: cover
+            height: 100px   
+#krasnodar
+    top: 380px
+    box-shadow: 0 0 1px 2px #ffdb77
+    left: 69px
+    &:hover
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_5.png)
+            background-size: cover
+            height: 100px
+    &:focus
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_5.png)
+            background-size: cover
+            height: 100px  
+#tumen
+    top: 336px
+    left: 293px
+    &:hover
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_1.png)
+            background-size: cover
+            height: 100px
+#ulan
+    top: 405px
+    left: 490px
+    &:hover
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_1.png)
+            background-size: cover
+            height: 100px
+#moscow
+    top: 290px
+    left: 125px
+    &:hover
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_6.png)
+            background-size: cover
+            height: 100px
+#ekaterenburg
+    top: 326px
+    left: 243px
+    &:hover
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_7.png)
+            background-size: cover
+            height: 100px
+#sevastopol
+    top: 334px
+    left: 30px
+    &:hover
+        &::before
+            animation: pulse 1s
+            content: ""
+            width: 200px
+            position: absolute
+            top: -100px
+            left: 10px
+            background-image: url(../img/Всплывашка_7.png)
+            background-size: cover
+            height: 100px
 @keyframes pulse 
     0%
         width: 0
@@ -90,6 +272,9 @@
             width: 5px
             height: 5px
             border-radius: 50%
-            border: 1px solid #DABD6D
-            box-shadow: 0 0 2px 2px #dabd6d
+            cursor: pointer
+        &__not-active
+            width: 5px
+            height: 5px
+            border-radius: 50%
             cursor: pointer

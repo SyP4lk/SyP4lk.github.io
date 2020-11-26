@@ -20,6 +20,54 @@ if((width < 800) && (width > 546)){
             top: newTop,
             left: newLeft
         })
+        newTop =  parseInt($('.karta__active').eq(3).css('top'))-(newWidt*0.11);
+         newLeft =  parseInt($('.karta__active').eq(3).css('left'))-(newWidt*0.2);
+        $('.karta__active').eq(3).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__active').eq(4).css('top'))-(newWidt*0.15);
+         newLeft =  parseInt($('.karta__active').eq(4).css('left'))-(newWidt*0.1);
+        $('.karta__active').eq(4).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__active').eq(5).css('top'))-(newWidt*0.17);
+         newLeft =  parseInt($('.karta__active').eq(5).css('left'))-(newWidt*0.1);
+        $('.karta__active').eq(5).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__active').eq(6).css('top'))-(newWidt*0.17);
+         newLeft =  parseInt($('.karta__active').eq(6).css('left'))-(newWidt*0.08);
+        $('.karta__active').eq(6).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__active').eq(7).css('top'))-(newWidt*0.12);
+         newLeft =  parseInt($('.karta__active').eq(7).css('left'))-(newWidt*0.4);
+        $('.karta__active').eq(7).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__active').eq(8).css('top'))-(newWidt*0.2);
+         newLeft =  parseInt($('.karta__active').eq(8).css('left'))-(newWidt*0.63);
+        $('.karta__active').eq(8).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__not-active').eq(0).css('top'))-(newWidt*0.05);
+         newLeft =  parseInt($('.karta__not-active').eq(0).css('left'))-(newWidt*0.15);
+        $('.karta__not-active').eq(0).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__not-active').eq(1).css('top'))-(newWidt*0.1);
+         newLeft =  parseInt($('.karta__not-active').eq(1).css('left'))-(newWidt*0.3);
+        $('.karta__not-active').eq(1).css({
+            top: newTop,
+            left: newLeft
+        })
     
 }
 
@@ -42,5 +90,59 @@ if(width < 546){
         top: newTop,
         left: newLeft
     })
+    newTop =  parseInt($('.karta__active').eq(3).css('top'))-(newWidt*0.12);
+         newLeft =  parseInt($('.karta__active').eq(3).css('left'))-(newWidt*0.19);
+        $('.karta__active').eq(3).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__active').eq(4).css('top'))-(newWidt*0.14);
+        newLeft =  parseInt($('.karta__active').eq(4).css('left'))-(newWidt*0.07);
+       $('.karta__active').eq(4).css({
+           top: newTop,
+           left: newLeft
+       })
+       newTop =  parseInt($('.karta__active').eq(5).css('top'))-(newWidt*0.17);
+         newLeft =  parseInt($('.karta__active').eq(5).css('left'))-(newWidt*0.08);
+        $('.karta__active').eq(5).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__active').eq(6).css('top'))-(newWidt*0.17);
+         newLeft =  parseInt($('.karta__active').eq(6).css('left'))-(newWidt*0.08);
+        $('.karta__active').eq(6).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__active').eq(7).css('top'))-(newWidt*0.11);
+         newLeft =  parseInt($('.karta__active').eq(7).css('left'))-(newWidt*0.36);
+        $('.karta__active').eq(7).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__active').eq(8).css('top'))-(newWidt*0.2);
+         newLeft =  parseInt($('.karta__active').eq(8).css('left'))-(newWidt*0.63);
+        $('.karta__active').eq(8).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__not-active').eq(0).css('top'))-(newWidt*0.05);
+         newLeft =  parseInt($('.karta__not-active').eq(0).css('left'))-(newWidt*0.15);
+        $('.karta__not-active').eq(0).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__not-active').eq(1).css('top'))-(newWidt*0.1);
+         newLeft =  parseInt($('.karta__not-active').eq(1).css('left'))-(newWidt*0.3);
+        $('.karta__not-active').eq(1).css({
+            top: newTop,
+            left: newLeft
+        })
+        newTop =  parseInt($('.karta__not-active').eq(2).css('top'))-(newWidt*0.1);
+         newLeft =  parseInt($('.karta__not-active').eq(2).css('left'))-(newWidt*0.03);
+        $('.karta__not-active').eq(2).css({
+            top: newTop,
+            left: newLeft
+        })
 
 }
