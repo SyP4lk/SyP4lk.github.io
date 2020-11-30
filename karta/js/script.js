@@ -9,7 +9,7 @@ function newPos (top,left, id){
     })
 }
 
-if(width > 800){
+
     anime({
         targets: '#pulse0',
         translateX: 60,
@@ -66,12 +66,13 @@ if(width > 800){
           duration: 2000,
           loop: true
         });
-}
+
 
 
 if((width < 800) && (width > 546)){
         newPos(0.13, 0.2, '#newKub');
         newPos(0.107 , 0.225, '#samara');
+        newPos(0.107 , 0.225, '.pulse');
         newPos(0.14,0.3,'#chelyabinsk');
         newPos(0.14,0.07,'#newRos');
         newPos(0.17,0.08,'#gelendgik')
@@ -88,11 +89,68 @@ if((width < 800) && (width > 546)){
         newPos(0.11,0.57,'#krasnoyarsk')
         newPos(0.17,0.61,'#irkutsk');
         newPos(0.17,0.275,'#grosniy');
-        newPos(-0.05,0.2,'#peterburg')
+        newPos(-0.05,0.2,'#peterburg');
+        anime({
+          targets: '#pulse0',
+          translateX: 60-(60*0.14),
+          translateY: 28-(28*0.15),
+          easing: 'linear',
+          duration: 2000,
+          loop: true
+        });
+        anime({
+          targets: '#pulse1',
+          translateX: 115-(115*0.1),
+          translateY: 5,
+          easing: 'linear',
+          duration: 2000,
+          loop: true
+        });
+        anime({
+          targets: '#pulse2',
+          translateX: 315-(315*0.05),
+          translateY: 75-(75*0.05),
+          easing: 'linear',
+          duration: 2000,
+          loop: true
+        });
+          anime({
+            targets: '#pulse3',
+            translateX: -10,
+            translateY: 15,
+            easing: 'linear',
+            duration: 2000,
+            loop: true
+          });
+          anime({
+            targets: '#pulse4',
+            translateX: -110,
+            translateY: 30,
+            easing: 'linear',
+            duration: 2000,
+            loop: true
+          });
+          anime({
+            targets: '#pulse5',
+            translateX: -114,
+            translateY: 43,
+            easing: 'linear',
+            duration: 2000,
+            loop: true
+          });
+          anime({
+            targets: '#pulse6',
+            translateX: -95,
+            translateY: 43,
+            easing: 'linear',
+            duration: 2000,
+            loop: true
+          });
 }
 if(width < 546){
         newPos(0.125, 0.203, '#newKub');
         newPos(0.105 , 0.219, '#samara');
+        newPos(0.105 , 0.219, '.pulse');
         newPos(0.138,0.295,'#chelyabinsk');
         newPos(0.142,0.071,'#newRos');
         newPos(0.16,0.07,'#gelendgik')
@@ -110,4 +168,60 @@ if(width < 546){
         newPos(0.17,0.605,'#irkutsk');
         newPos(0.17,0.268,'#grosniy');
         newPos(-0.05,0.19,'#peterburg')
+        anime({
+          targets: '#pulse0',
+          translateX: 22,
+          translateY: 10,
+          easing: 'linear',
+          duration: 2000,
+          loop: true
+        });
+        anime({
+          targets: '#pulse1',
+          translateX: 48,
+          translateY: 3,
+          easing: 'linear',
+          duration: 2000,
+          loop: true
+        });
+        anime({
+          targets: '#pulse2',
+          translateX:125,
+          translateY: 30,
+          easing: 'linear',
+          duration: 2000,
+          loop: true
+        });
+          anime({
+            targets: '#pulse3',
+            translateX: -2,
+            translateY: 2,
+            easing: 'linear',
+            duration: 2000,
+            loop: true
+          });
+          anime({
+            targets: '#pulse4',
+            translateX: -48,
+            translateY: 13,
+            easing: 'linear',
+            duration: 2000,
+            loop: true
+          });
+          anime({
+            targets: '#pulse5',
+            translateX: -48,
+            translateY: 18,
+            easing: 'linear',
+            duration: 2000,
+            loop: true
+          });
+          anime({
+            targets: '#pulse6',
+            translateX: -39,
+            translateY: 19,
+            easing: 'linear',
+            duration: 2000,
+            loop: true
+          });
 }

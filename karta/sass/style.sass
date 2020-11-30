@@ -315,16 +315,13 @@
         width: 0
     100%
         width: 210px
-@media ( max-width: 800px )
-    .pulse
-        display: none
 @media (max-width: 546px)
     .karta
         &__active
             width: 3px
             height: 3px
             border-radius: 50%
-            box-shadow: 0 0 1px 1px #dabd6d
+            box-shadow: 0 0 0px -1px #dabd6d
             cursor: pointer
         &__not-active
             box-shadow: 0 0 1px 1px #7066b8
@@ -332,15 +329,10 @@
             height: 3px
             border-radius: 50%
             cursor: pointer
+    .pulse
+        width: 1px
+        height: 1px
+        box-shadow: 0 0 1px 1px #dabd6d
     #gelendgik,#krasnodar,#newRos
         box-shadow: 0 0 1px 1px #dabd6d
-    .pulse
-        display: none
-    @keyframes boxShadowPulse
-        0%
-            box-shadow: 0 0 2px 2px #dabd6d
-        75%
-            box-shadow: 0 0 2px 2px #dabd6d
-        100%
-            box-shadow: 0 0 2px 2px #dabd6d
         
