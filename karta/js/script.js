@@ -15,7 +15,7 @@ function newPos (top,left, id){
         translateX: 60,
         translateY: 28,
         easing: 'linear',
-        duration: 2000,
+        duration: 5000,
         loop: true
       });
       anime({
@@ -23,7 +23,7 @@ function newPos (top,left, id){
           translateX: 115,
           translateY: 5,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
         anime({
@@ -31,7 +31,7 @@ function newPos (top,left, id){
           translateX: 315,
           translateY: 75,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
         anime({
@@ -39,7 +39,7 @@ function newPos (top,left, id){
           translateX: -12,
           translateY: 15,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
         anime({
@@ -47,7 +47,7 @@ function newPos (top,left, id){
           translateX: -120,
           translateY: 32,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
         anime({
@@ -55,7 +55,7 @@ function newPos (top,left, id){
           translateX: -118,
           translateY: 45,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
         anime({
@@ -63,7 +63,7 @@ function newPos (top,left, id){
           translateX: -98,
           translateY: 45,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
 
@@ -95,7 +95,7 @@ if((width < 800) && (width > 546)){
           translateX: 60-(60*0.14),
           translateY: 28-(28*0.15),
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
         anime({
@@ -103,7 +103,7 @@ if((width < 800) && (width > 546)){
           translateX: 115-(115*0.1),
           translateY: 5,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
         anime({
@@ -111,7 +111,7 @@ if((width < 800) && (width > 546)){
           translateX: 315-(315*0.05),
           translateY: 75-(75*0.05),
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
           anime({
@@ -119,7 +119,7 @@ if((width < 800) && (width > 546)){
             translateX: -10,
             translateY: 15,
             easing: 'linear',
-            duration: 2000,
+            duration: 5000,
             loop: true
           });
           anime({
@@ -127,7 +127,7 @@ if((width < 800) && (width > 546)){
             translateX: -110,
             translateY: 30,
             easing: 'linear',
-            duration: 2000,
+            duration: 5000,
             loop: true
           });
           anime({
@@ -135,7 +135,7 @@ if((width < 800) && (width > 546)){
             translateX: -114,
             translateY: 43,
             easing: 'linear',
-            duration: 2000,
+            duration: 5000,
             loop: true
           });
           anime({
@@ -143,7 +143,7 @@ if((width < 800) && (width > 546)){
             translateX: -95,
             translateY: 43,
             easing: 'linear',
-            duration: 2000,
+            duration: 5000,
             loop: true
           });
 }
@@ -173,7 +173,7 @@ if(width < 546){
           translateX: 22,
           translateY: 10,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
         anime({
@@ -181,7 +181,7 @@ if(width < 546){
           translateX: 48,
           translateY: 3,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
         anime({
@@ -189,7 +189,7 @@ if(width < 546){
           translateX:125,
           translateY: 30,
           easing: 'linear',
-          duration: 2000,
+          duration: 5000,
           loop: true
         });
           anime({
@@ -197,7 +197,7 @@ if(width < 546){
             translateX: -2,
             translateY: 2,
             easing: 'linear',
-            duration: 2000,
+            duration: 5000,
             loop: true
           });
           anime({
@@ -205,7 +205,7 @@ if(width < 546){
             translateX: -48,
             translateY: 13,
             easing: 'linear',
-            duration: 2000,
+            duration: 5000,
             loop: true
           });
           anime({
@@ -213,7 +213,7 @@ if(width < 546){
             translateX: -48,
             translateY: 18,
             easing: 'linear',
-            duration: 2000,
+            duration: 5000,
             loop: true
           });
           anime({
@@ -221,7 +221,7 @@ if(width < 546){
             translateX: -39,
             translateY: 19,
             easing: 'linear',
-            duration: 2000,
+            duration: 5000,
             loop: true
           });
 }
