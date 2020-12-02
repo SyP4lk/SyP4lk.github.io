@@ -1,7 +1,3 @@
-
-
-
-
     anime({
         targets: '#pulse0',
         translateX: 60,
