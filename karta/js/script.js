@@ -6,14 +6,6 @@
         duration: 5000,
         loop: true
       });
-      anime({
-          targets: '#pulse1',
-          translateX: 115,
-          translateY: 5,
-          easing: 'linear',
-          duration: 5000,
-          loop: true
-        });
         anime({
           targets: '#pulse2',
           translateX: 315,
