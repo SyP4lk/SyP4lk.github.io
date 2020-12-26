@@ -7,43 +7,133 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-
- <div class="construct">
-  <div class="construct__bg">
-    <h2>Фон</h2>
-    <img src="img/1.jpg" alt="">
-    <img src="img/2.jpg" alt="">
-  </div>
-  <div class="construct__text">
-    <h2>Позиционирование</h2>
-    <button class="posBtn-name">лево</button>
-    <button class="posBtn-name">центр</button>
-    <button class="posBtn-name">право</button>
-    <button class="posBtn-text">лево</button>
-    <button class="posBtn-text">центр</button>
-    <button class="posBtn-text">право</button>
-  </div>
-  <h2>Цвет текста</h2>
-    <input id="color-name" type="text" placeholder="#00000">
-    <input id="color-text" type="text" placeholder="#00000">
-  <h2>Отступы(нужно всё заполнить)</h2>
-    <input class="inputPad-name" type="text" placeholder="лево">
-    <input class="inputPad-name" type="text" placeholder="верх">
-    <input class="inputPad-name" type="text" placeholder="право">
-    <input class="inputPad-name" type="text" placeholder="низ">
-    <input class="inputPad-text" type="text" placeholder="лево">
-    <input class="inputPad-text" type="text" placeholder="верх">
-    <input class="inputPad-text" type="text" placeholder="право">
-    <input class="inputPad-text" type="text" placeholder="низ">
- </div>
-<div class="construct-right">
-  <input draggable="true" type="text" maxlength="55" class="content__name" placeholder="Заголовок">
-  <textarea draggable="true" name="text" id="text" cols="67" rows="16" placeholder="Текст"></textarea>
+<div class="header">
+  <h1>Event Logotype</h1>
 </div>
- <div class="content">
-   <div class="content__text">
-    
+<div class="popup">
+  <div class="construct__text">
+    <div class="construct__texts">
+      <div class="construct__texts-name">
+        Введите текст заголовка <br>
+        <span>Придумайте яркий, ёмкий заголовок</span>
+      </div>
+      <textarea value='Заголовок' name="" class="name" id="textName" cols="30" rows="10"></textarea>
+      <textarea value='Поздравление' name="" class="text" id="textName" cols="30" rows="10"></textarea>
+      <div class="button redac">Изменить</div>
+      <div class="button redac">Изменить</div>
+    </div>
+    <div class="construct__footer">
+      <div class="fonts">
+        <div class="fonts_name">
+          Размер шрифта
+        </div>
+        <div class="fonts_content">
+          <input type="number" min="1" max="40" value="12" class="name">
+          <div class="plus name">
+            <div id="pl1"></div>
+            <div id="pl2"></div>
+          </div>
+          <div class="minus name">
+            <div id="pl2"></div>
+          </div>
+          <input type="number" min="1" max="40" value="12" class="text">
+          <div class="plus text">
+            <div id="pl1"></div>
+            <div id="pl2"></div>
+          </div>
+          <div class="minus text">
+            <div id="pl2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="pos">
+        <div class="pos_name">Выравнивание</div>
+        <div class="pos_content">
+          <div class="posBtn-name left">
+            <div id="sp1"></div>
+            <div id="sp2"></div>
+            <div id="sp3"></div>
+          </div>
+          <div class="posBtn-name center">
+            <div id="sp1"></div>
+            <div id="sp2"></div>
+            <div id="sp3"></div>
+          </div>
+          <div class="posBtn-name right">
+            <div id="sp1"></div>
+            <div id="sp2"></div>
+            <div id="sp3"></div>
+          </div>
+          <div class="posBtn-text left">
+            <div id="sp1"></div>
+            <div id="sp2"></div>
+            <div id="sp3"></div>
+          </div>
+          <div class="posBtn-text center">
+            <div id="sp1"></div>
+            <div id="sp2"></div>
+            <div id="sp3"></div>
+          </div>
+          <div class="posBtn-text right">
+            <div id="sp1"></div>
+            <div id="sp2"></div>
+            <div id="sp3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
  </div>
+ <div class="black"></div>
+
+<div class="cont">
+  <div class="construct">
+    <div class="construct__bg">
+      <h2>Выберите дизайн</h2>
+      <img class="bg" src="img/1.jpg" alt="">
+      <img class="bg" src="img/2.jpg" alt="">
+    </div>
+    </div>
+  
+    <div class="cont__wrap">
+      <h2 class="name">Cоздай свою открытку</h2>
+   <div class="content">
+    <div class="content__text">
+      <div draggable="true" class="content__name">
+        <div id="drag1">
+          <img src="img/move.png" alt="">
+        </div>
+        <div id='editing-name'>
+          <img src="img/pen.png" alt="">
+        </div>
+        <h2 class="contentName">Заголовок</h2>
+      </div>
+      <div draggable="true" id="text" >
+        <div id="drag2">
+          <img src="img/move.png" alt="">
+        </div>
+        <div id='editing-text'>
+          <img src="img/pen.png" alt="">
+        </div>
+        <p class="contentText">Поздравление</p>
+      </div>
+    </ыdiv>
+  </div>
+</div>
+<div class="cont__footer">
+  <div class="button">Сохранить</div>
+  <div class="button__text">
+    Вы можете сохранить получившийся результат в формате jpeg
+  </div>
+</div>
+</div>
+    </div>
+    <div class="footer">
+      <div class="footer__name">
+        <h2>digital decor</h2>
+      </div>
+    </div>
   <script src='js/script.js'></script>
 </body>
 </html>
