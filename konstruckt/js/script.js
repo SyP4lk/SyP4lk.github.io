@@ -258,3 +258,10 @@ document.querySelectorAll('.redac')[1].addEventListener('click', ()=>{
     pozd.innerHTML = 'Заголовок';
   }
 })
+
+function   saveCanvas(){
+  html2canvas(document.querySelector(".content")).then(canvas => {
+    canvas.toBlob(function(blob) {
+        saveAs(blob, "pretty image.jpeg");
+    });
+})}
