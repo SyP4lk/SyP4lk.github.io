@@ -155,14 +155,12 @@ input::-webkit-inner-spin-button
         min-height: 100%
     &__name
         display: none
-        position: absolute
+        position: relative
         text-align: center
         background-color: rgba(0,0,0, 0)
         min-height: 50px
         width: 200px 
         cursor: pointer
-        top: 10px
-        left: 10px
         &:hover
             border: 1px solid #0062b8
 #editing-name
@@ -183,7 +181,7 @@ input::-webkit-inner-spin-button
     width: 200px
     resize: none
     text-align: center
-    position: absolute
+    position: relative
     top: 10px
     left: 10px
     cursor: pointer
@@ -371,3 +369,20 @@ input::-webkit-inner-spin-button
     display: none
 .hovered
     background-color: #ffbfbfdd
+
+
+@media screen and ( max-width: 1086px  )
+    .content
+        width: 500px
+@media screen and ( max-width: 685px  )
+    .cont
+        flex-direction: column-reverse
+    .construct
+        width: 100%
+        height: 150px
+        justify-content: flex-start
+    .cont__wrap
+        margin-left: 20px
+    .content
+        width: 90%
+    

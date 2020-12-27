@@ -24,7 +24,7 @@
 
   img[0].addEventListener('click', () => {
     contentName.style.cssText = 'top: 40%;left: 47%; display: block;';
-    text.style.cssText = 'top: 50%;left: 47%; display: block;';
+    text.style.cssText = 'left: 30%; display: block;';
   })
   img[1].addEventListener('click', () => {
     contentName.style.cssText = 'top: 40%;left: 47%; display: block;';
@@ -41,79 +41,16 @@
     }
 
   //drag'n'drop
-  document.querySelector('#drag2').onmousedown = function(e) {
-
-    var coords = getCoords(text);
-    var shiftX = e.pageX - coords.left;
-    var shiftY = e.pageY - coords.top;
-  
-    text.style.position = 'absolute';
-    contentText.appendChild(text);
-    moveAt(e);
-  
-  
-    function moveAt(e) {
-      text.style.left = e.pageX - shiftX + 'px';
-      text.style.top = e.pageY - shiftY + 'px';
-    }
-  
-    document.onmousemove = function(e) {
-      moveAt(e);
-    };
-  
-    document.querySelector('#drag2').onmouseup = function() {
-      document.onmousemove = null;
-      document.querySelector('#drag2').onmouseup = null;
-    };
-
-    
-  
-  }
-  
-  text.ondragstart = function() {
-    return false;
-  };
-  
-  document.querySelector('#drag1').onmousedown = function(e) {
-
-    var coords = getCoords(contentName);
-    var shiftX = e.pageX - coords.left;
-    var shiftY = e.pageY - coords.top;
-  
-    contentText.appendChild(contentName);
-    moveAt(e);
-  
-  
-    function moveAt(e) {
-      contentName.style.left = e.pageX - shiftX + 'px';
-      contentName.style.top = e.pageY - shiftY + 'px';
-    }
-  
-    document.onmousemove = function(e) {
-      moveAt(e);
-    };
-  
-    document.querySelector('#drag1').onmouseup = function() {
-      document.onmousemove = null;
-      document.querySelector('#drag1').onmouseup = null;
-    };
-    
-  }
-  text.ondragstart = function() {
-    return false;
-  };
-  
-  contentName.ondragstart = function() {
-    return false;
-  };
-
-  
-  function getCoords(elem) {   // кроме IE8-
-    var box = elem.getBoundingClientRect();
-    return {
-      top: box.top + pageYOffset,
-      left: box.left + pageXOffset
-    };
+  var draggableElems = document.querySelectorAll('.js-drag');
+  // array of Draggabillies
+  var draggies = []
+  // init Draggabillies
+  for ( var i=0; i < draggableElems.length; i++ ) {
+    var draggableElem = draggableElems[i];
+    var draggie = new Draggabilly( draggableElem, {
+      // options...
+    });
+    draggies.push( draggie );
   }
 
   contentName.addEventListener('mouseover',()=>{
