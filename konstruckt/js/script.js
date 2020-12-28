@@ -190,9 +190,9 @@ document.querySelectorAll('.redac')[1].addEventListener('click', ()=>{
 })
 
 function   saveCanvas(){
+  window.scrollTo(0,0);
   html2canvas(document.querySelector(".content")).then(canvas => {
-    $('html, body').animate({scrollTop: 10}, 0);
     canvas.toBlob(function(blob) {
-        saveAs(blob, "pretty image.jpeg" , 0.2);
+        saveAs(blob, "pretty image.jpeg", 0.9);
     });
 })}
