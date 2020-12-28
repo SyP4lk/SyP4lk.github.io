@@ -193,6 +193,6 @@ function   saveCanvas(){
   html2canvas(document.querySelector(".content")).then(canvas => {
     $('html, body').animate({scrollTop: 10}, 0);
     canvas.toBlob(function(blob) {
-        saveAs(blob, "pretty image.jpeg" , 0);
+        saveAs(blob, "pretty image.jpeg" , 0.2);
     });
 })}
