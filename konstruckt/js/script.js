@@ -1,6 +1,7 @@
 //достаём нужные элементы из DOM
   let bg = document.querySelector('.content'),
-      img = document.querySelectorAll('.bg'),
+      imgBg = document.querySelectorAll('.js-bg'),
+      img = document.querySelectorAll('.bg')
       contentText = document.querySelector('.content__text'),
       posBtnName = document.querySelectorAll('.posBtn-name'),
       posBtnText = document.querySelectorAll('.posBtn-text'),
@@ -16,20 +17,15 @@
       pozd = document.querySelector('.contentText');
 
   //изменение фона
+  imgBg[0].style.cssText = "display: block;";
   for(let i =0 ; i < img.length; i++){
     img[i].addEventListener('click', () => {
-      let src = img[i].getAttribute("src");
-      bg.style.cssText = "background-image: url(" + src + ")";
+      for(let r =0 ; r < imgBg.length; r++){
+        imgBg[r].style.cssText = "display: none;";
+      }
+      imgBg[i].style.cssText = "display: block;";
     })}
 
-  img[0].addEventListener('click', () => {
-    contentName.style.cssText = 'top: 40%;left: 47%; display: block;';
-    text.style.cssText = 'left: 30%; display: block;';
-  })
-  img[1].addEventListener('click', () => {
-    contentName.style.cssText = 'top: 40%;left: 47%; display: block;';
-    text.style.cssText = 'top: 50%;left: 47%; display: block;';
-  })
     
     if(inputSize[1].style.display == 'flex'){
       plus.addEventListener('click',()=>{
@@ -41,33 +37,30 @@
     }
 
   //drag'n'drop
-  var draggableElems = document.querySelectorAll('.js-drag');
-  // array of Draggabillies
-  var draggies = []
-  // init Draggabillies
-  for ( var i=0; i < draggableElems.length; i++ ) {
-    var draggableElem = draggableElems[i];
-    var draggie = new Draggabilly( draggableElem, {
-      // options...
+  
+  var $draggable = $(text).draggabilly({
+    
+        containment:true
+    
     });
-    draggies.push( draggie );
-  }
+    var $draggable = $(contentName).draggabilly({
+    
+      containment:true
+  
+  });
+    
 
   contentName.addEventListener('mouseover',()=>{
     document.getElementById('editing-name').style.display = 'flex';
-    document.querySelector('#drag1').style.display = 'flex';
   })
   contentName.addEventListener('mouseleave',()=>{
     document.getElementById('editing-name').style.display = 'none';
-    document.querySelector('#drag1').style.display = 'none';
   })
   text.addEventListener('mouseover',()=>{
     document.getElementById('editing-text').style.display = 'flex';
-    document.querySelector('#drag2').style.display = 'flex';
   })
   text.addEventListener('mouseleave',()=>{
     document.getElementById('editing-text').style.display = 'none';
-    document.querySelector('#drag2').style.display = 'none';
   })
 
   document.getElementById('editing-name').addEventListener('click',()=>{
@@ -199,6 +192,6 @@ document.querySelectorAll('.redac')[1].addEventListener('click', ()=>{
 function   saveCanvas(){
   html2canvas(document.querySelector(".content")).then(canvas => {
     canvas.toBlob(function(blob) {
-        saveAs(blob, "pretty image.jpeg");
+        saveAs(blob, "pretty image.jpeg" , 0);
     });
 })}

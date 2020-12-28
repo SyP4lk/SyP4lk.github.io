@@ -99,34 +99,29 @@
     <div class="cont__wrap">
       <h2 class="name">Cоздай свою открытку</h2>
    <div class="content">
-    <div class="content__text">
       <div draggable="true" class="content__name js-drag">
-        <div id="drag1">
-          <img src="img/move.png" alt="">
-        </div>
         <div id='editing-name'>
           <img src="img/pen.png" alt="">
         </div>
         <h2 class="contentName">Заголовок</h2>
       </div>
       <div draggable="true" id="text" class="js-drag">
-        <div id="drag2">
-          <img src="img/move.png" alt="">
-        </div>
         <div id='editing-text'>
           <img src="img/pen.png" alt="">
         </div>
         <p class="contentText">Поздравление</p>
       </div>
-    </ыdiv>
+      <img class="js-bg" src="img/1.jpg" alt="">
+      <img class="js-bg" src="img/2.jpg" alt="">
+  </div>
+  <div class="cont__footer">
+    <div class="button" onclick='saveCanvas()'>Сохранить</div>
+    <div draggable="true" class="button__text">
+      Вы можете сохранить получившийся результат в формате jpeg
+    </div>
   </div>
 </div>
-<div class="cont__footer">
-  <div class="button" onclick='saveCanvas()'>Сохранить</div>
-  <div class="button__text">
-    Вы можете сохранить получившийся результат в формате jpeg
-  </div>
-</div>
+
 </div>
     </div>
     <div class="footer">
@@ -134,7 +129,8 @@
         <h2>digital decor</h2>
       </div>
     </div>
-    <script src='js/drag.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='js/draggabilly.pkgd.min.js'></script>
   <script src="js/FileSaver.js"></script>
   <script src="js/html2canvas.min.js"></script>
   <script src='js/script.js'></script>

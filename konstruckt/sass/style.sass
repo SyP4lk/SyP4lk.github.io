@@ -148,18 +148,18 @@ input::-webkit-inner-spin-button
     height: 450px
     background-color: #bfbaba
     background-size: cover
-    background-repeat: no-repeat
+    position: relative
     border-radius: 5px
     &__text
         width: 100%
         min-height: 100%
     &__name
-        display: none
         position: relative
         text-align: center
         background-color: rgba(0,0,0, 0)
         min-height: 50px
         width: 200px 
+        z-index: 2
         cursor: pointer
         &:hover
             border: 1px solid #0062b8
@@ -177,12 +177,12 @@ input::-webkit-inner-spin-button
     border-radius: 50% 
 
 #text
-    display: none
     width: 200px
     resize: none
     text-align: center
     position: relative
     top: 10px
+    z-index: 2
     left: 10px
     cursor: pointer
     min-height: 50px
@@ -370,10 +370,18 @@ input::-webkit-inner-spin-button
 .hovered
     background-color: #ffbfbfdd
 
-
+.js-bg
+    position: absolute
+    top: 0
+    z-index: 1
+    display: none
+    width: 100%
+    height: 100%
 @media screen and ( max-width: 1086px  )
     .content
         width: 500px
+    .popup
+        left: 30%
 @media screen and ( max-width: 685px  )
     .cont
         flex-direction: column-reverse
@@ -382,7 +390,19 @@ input::-webkit-inner-spin-button
         height: 150px
         justify-content: flex-start
     .cont__wrap
-        margin-left: 20px
+        margin-left: 0
     .content
-        width: 90%
+        width: 100%
+        height: 400px
+    .popup
+        left: 10%
+@media screen and ( max-width: 480px  )
+    .popup
+        width: 300px
+        left: 20%
+    .pos_content
+        margin-left: 20px
+@media screen and ( max-width: 390px  )
+    .popup
+        left: 10%   
     
