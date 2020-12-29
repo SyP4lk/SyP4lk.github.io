@@ -14,18 +14,35 @@
       minus = document.querySelectorAll('.minus'),
       textarea = document.querySelectorAll('textarea'),
       head = document.querySelector('.contentName'),
-      pozd = document.querySelector('.contentText');
+      pozd = document.querySelector('.contentText'),
+      win_w = $(document).width();
 
   //изменение фона
-  imgBg[0].style.cssText = "display: block;";
-  for(let i =0 ; i < img.length; i++){
-    img[i].addEventListener('click', () => {
-      for(let r =0 ; r < imgBg.length; r++){
-        imgBg[r].style.cssText = "display: none;";
-      }
-      imgBg[i].style.cssText = "display: block;";
-    })}
+  function posContent(number,topText,leftText,topName,leftName){
+      img[number].addEventListener('click', () => {
+        for(let r =0 ; r < imgBg.length; r++){
+          imgBg[r].style.cssText = "display: none;";
+        }
+        imgBg[number].style.cssText = "display: block;";
+        text.style.cssText +="top:"+topText+"px;left:"+leftText+"tpx;";
+        contentName.style.cssText +="top:"+topName+"px;left:"+leftName+"px;";
+      })
+  }
 
+  if(win_w > 500){
+  imgBg[0].style.display = "block";
+  text.style.cssText +="top:250px;left:290px;";
+  contentName.style.cssText +="top:200px;left: 300px;";
+  posContent(0,300,290,250,300);
+  posContent(1,300,200,200,300);
+  }
+  if(win_w < 500){
+    imgBg[0].style.display = "block";
+    text.style.cssText +="top: 200px; left:50px;";
+    contentName.style.cssText +="top: 100px; left: 50px;";
+    posContent(0,200,50,100,50);
+    posContent(1,200,50,50,50);
+  }
     
     if(inputSize[1].style.display == 'flex'){
       plus.addEventListener('click',()=>{
@@ -38,17 +55,27 @@
 
   //drag'n'drop
   
-  var $draggable = $(text).draggabilly({
-    
-        containment:true
-    
-    });
-    var $draggable = $(contentName).draggabilly({
-    
-      containment:true
+  var $draggable = $('.js-drag').draggabilly({
+      containment: true
+  })
   
-  });
-    
+
+  contentName.addEventListener('touchstart',()=>{
+    document.getElementById('editing-name').style.display = 'flex';
+    contentName.style.cssText += ' border: 1px solid #0062b8;';
+  })
+  contentName.addEventListener('touchcancel',()=>{
+    document.getElementById('editing-name').style.display = 'none';
+    contentName.style.cssText += ' border: none;';
+  })
+  text.addEventListener('touchstart',()=>{
+    document.getElementById('editing-text').style.display = 'flex';
+    text.style.cssText += ' border: 1px solid #0062b8;';
+  })
+  text.addEventListener('touchcancel',()=>{
+    document.getElementById('editing-text').style.display = 'none';
+    text.style.cssText += ' border: none;';
+  })
 
   contentName.addEventListener('mouseover',()=>{
     document.getElementById('editing-name').style.display = 'flex';
@@ -62,6 +89,7 @@
   text.addEventListener('mouseleave',()=>{
     document.getElementById('editing-text').style.display = 'none';
   })
+
 
   document.getElementById('editing-name').addEventListener('click',()=>{
 
@@ -191,6 +219,10 @@ document.querySelectorAll('.redac')[1].addEventListener('click', ()=>{
 
 function   saveCanvas(){
   window.scrollTo(0,0);
+  document.getElementById('editing-name').style.display = 'none';
+  contentName.style.cssText += ' border: none;';
+  document.getElementById('editing-text').style.display = 'none';
+  text.style.cssText += ' border: none;';
   html2canvas(document.querySelector(".content")).then(canvas => {
     canvas.toBlob(function(blob) {
         saveAs(blob, "pretty image.jpeg", 0.9);
