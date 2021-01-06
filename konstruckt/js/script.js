@@ -15,33 +15,80 @@
       textarea = document.querySelectorAll('textarea'),
       head = document.querySelector('.contentName'),
       pozd = document.querySelector('.contentText'),
-      win_w = $(document).width();
+      win_w = $(document).width(),
+      content = document.querySelector('.content'),
+      color = document.querySelectorAll('.js-color');
 
   //изменение фона
-  function posContent(number,topText,leftText,topName,leftName){
+  function posContent(number,leftText,topText,leftName,topName,width,height,contWidth){
       img[number].addEventListener('click', () => {
         for(let r =0 ; r < imgBg.length; r++){
           imgBg[r].style.cssText = "display: none;";
         }
         imgBg[number].style.cssText = "display: block;";
-        text.style.cssText +="top:"+topText+"px;left:"+leftText+"tpx;";
-        contentName.style.cssText +="top:"+topName+"px;left:"+leftName+"px;";
+        text.style.cssText = "transform: translate("+leftText+"px, "+topText+"px);";
+        contentName.style.cssText = "transform: translate("+leftName+"px, "+topName+"px);width: "+contWidth+"px;";
+        content.style.cssText = 'width: '+width+'px; height: '+height+'px';
+        color[0].innerHTML = 'C Новым Годом!';
+        color[1].innerHTML = 'Текст Поздравления';
+        if(number == 0){
+          for(let i = 0; i<color.length; i++){
+            color[i].style.cssText+='color: #9A9032;font-family: "Amatic SC";';
+          }
+          content.style.cssText = 'width: '+width+'px; height: '+height+'px;margin: 31px auto;';
+          color[0].style.cssText += 'font-size: 50px';
+          color[1].style.cssText += 'font-size: 15px';
+        }
+        if(number == 1){
+          for(let i = 0; i<color.length; i++){
+            color[i].style.cssText+='color: #fff;font-family: "Amatic SC";';
+          }
+          color[0].style.cssText += 'font-size: 100px';
+          color[1].style.cssText += 'font-size: 30px';
+          if(win_w < 500){
+            color[0].style.cssText += 'font-size: 50px';
+            color[1].style.cssText += 'font-size: 15px';
+          }
+        }
+        if(number == 2){
+          for(let i = 0; i<color.length; i++){
+            color[i].style.cssText+='font-family: "Amatic SC";';
+          }
+          color[0].style.cssText += 'color: red;font-size: 120px;';
+          color[1].style.cssText += 'color: #000;font-size: 30px';
+          if(win_w < 500){
+            color[0].style.cssText += 'font-size: 50px';
+            color[1].style.cssText += 'font-size: 15px';
+          }
+        }
       })
   }
 
   if(win_w > 500){
-  imgBg[0].style.display = "block";
-  text.style.cssText +="top:250px;left:290px;";
-  contentName.style.cssText +="top:200px;left: 300px;";
-  posContent(0,300,290,250,300);
-  posContent(1,300,200,200,300);
+    //drag'n'drop
+    var $draggable = $('.js-drag').draggabilly({
+      containment: true
+    });
+    imgBg[0].style.display = "block";
+    text.style.cssText = "transform: translate(177.6px, 39px);";
+    contentName.style.cssText = "transform: translate(177.6px, 13.2px);width: 200px;";
+    content.style.cssText = 'width: 400px; height: 562px; margin: 0 auto'
+    color[0].style.cssText += 'font-size: 50px;color: #9A9032;font-family: "Amatic SC";';
+    color[1].style.cssText += 'font-size: 15px;color: #9A9032;font-family: "Amatic SC";';
+    posContent(0,177.6,39,177.6,13.2,400,562,200);
+    posContent(1,538.4,113.2,432.8,75.2,'913px',562,400);
+    posContent(2,346.8,247,171.8,190.2,'913px',562,580);
   }
   if(win_w < 500){
     imgBg[0].style.display = "block";
-    text.style.cssText +="top: 200px; left:50px;";
-    contentName.style.cssText +="top: 100px; left: 50px;";
-    posContent(0,200,50,100,50);
-    posContent(1,200,50,50,50);
+    content.style.cssText = 'width: 300px; height: 400px;margin: 32px auto;'
+    text.style.cssText = "transform: translate(160px, 20px);";
+    contentName.style.cssText = "transform: translate(135px, 0px);width: 140px;";
+    color[0].style.cssText += 'font-size: 50px;color: #9A9032;font-family: "Amatic SC";';
+    color[1].style.cssText += 'font-size: 15px;color: #9A9032;font-family: "Amatic SC";';
+    posContent(0,160,20,135,0,300,400,140);
+    posContent(1,200,50,180,20,'100%',300,140);
+    posContent(2,135.8,150,60.8,120.2,'913px',300,250);
   }
     
     if(inputSize[1].style.display == 'flex'){
@@ -53,11 +100,8 @@
       })
     }
 
-  //drag'n'drop
   
-  var $draggable = $('.js-drag').draggabilly({
-      containment: true
-  })
+
   
 
   contentName.addEventListener('touchstart',()=>{
@@ -207,6 +251,8 @@ document.querySelectorAll('.redac')[0].addEventListener('click', ()=>{
   }else{
     head.innerHTML = 'Заголовок';
   }
+  document.querySelector('.popup').style.display ='none';
+    document.querySelector('.black').style.display ='none';
 })
 
 document.querySelectorAll('.redac')[1].addEventListener('click', ()=>{
@@ -215,6 +261,8 @@ document.querySelectorAll('.redac')[1].addEventListener('click', ()=>{
   }else{
     pozd.innerHTML = 'Заголовок';
   }
+  document.querySelector('.popup').style.display ='none';
+  document.querySelector('.black').style.display ='none';
 })
 
 function   saveCanvas(){

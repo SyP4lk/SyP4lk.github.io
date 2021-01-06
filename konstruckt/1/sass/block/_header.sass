@@ -1,0 +1,99 @@
+video
+    display: none
+.header
+    display: flex
+    text-align: center
+    justify-content: space-between
+    position: relative
+    &__logo
+        margin-top: 55px
+        margin-left: 75px
+        width: 191px
+        height: 84.62px
+    &__name
+        font-size: 30px
+        font-family: 'Roboto', sans-serif
+        margin-left: 90px
+        font-weight: 700
+        margin-top: 30px
+        p
+            font-weight: 400
+            &:nth-last-child(2)
+                font-size: 40px
+            &:nth-last-child(1)
+                font-weight: 700
+                font-size: 10px
+    &__decor
+        height: 70px
+@media screen and ( min-width: 1900px )
+    .header
+        display: flex
+        text-align: center
+        justify-content: space-between
+        position: relative
+        &__logo
+            margin-top: 55px
+            margin-left: 75px
+            width: 191px
+            height: 84.62px
+        &__name
+            font-size: 40px
+            font-family: 'Roboto', sans-serif
+            margin-left: 90px
+            font-weight: 700
+            margin-top: 30px
+            p
+                font-weight: 400
+                &:nth-last-child(2)
+                    font-size: 50px
+                &:nth-last-child(1)
+                    font-weight: 700
+                    font-size: 20px
+        &__decor
+            height: 70px
+
+
+@media screen and ( max-width: 950px )
+    body
+        margin: 0
+        height: 100%
+        background: url(../img/bg.png) 100% no-repeat 
+        background-size: cover
+    .header
+        display: flex
+        text-align: center
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        position: relative
+        &__logo
+            margin-top: 15px
+            margin-left: 0px
+            img
+                width: 100px
+                height: 50.62px
+        &__name
+            font-size: 15px
+            font-family: 'Roboto', sans-serif;
+            margin-left: 0px
+            font-weight: 700
+            margin-top: 5px
+            p
+                &:nth-last-child(2)
+                    font-size: 20px
+                &:nth-last-child(1)
+                    font-weight: 700
+                    font-size: 10px
+        &__decor
+            position: absolute
+            z-index: -1
+            transform: scale(-1, 1)
+            left: -140px
+            top: 0                   
+        
+@media screen and ( max-width: 526px )
+    body
+        margin: 0
+        height: 100%
+        background: url(../img/bg_m.png) 100% 50% no-repeat 
+        background-size: cover
