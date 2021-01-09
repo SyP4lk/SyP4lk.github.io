@@ -27,11 +27,11 @@ for(let i = 0; i < img.length;i++){
       content[r].style.display = 'none';
     }
     for(let j = 0 ; j < pozd.length; j++){
-      text[j].style.cssText = ''
+      text[j].style.cssText = 'touch-action: none'
       pozd[j].innerHTML = 'Текст Поздравления';
     }
     for(let l = 0 ; l < head.length; l++){
-      contentName[l].style.cssText = ''
+      contentName[l].style.cssText = 'touch-action: none'
       head[l].innerHTML = 'С Новым Годом!';
     }
     content[i].style.display = 'flex';
