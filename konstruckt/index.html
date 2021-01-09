@@ -2,6 +2,10 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta property="og:url" content="[URL]">
+  <meta property="og:title" content="[TITLE]">
+  <meta property="og:description" content="[DESC]">
+  <meta property="og:image" content="[IMAGE]">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Rufina&display=swap" rel="stylesheet">
@@ -22,8 +26,8 @@
       </div>
       <textarea value='Заголовок' name="" class="name" id="textName" cols="30" rows="10"></textarea>
       <textarea value='Поздравление' name="" class="text" id="textName" cols="30" rows="10"></textarea>
-      <div class="button redac"><img src="img/enter.png" alt=""></div>
-      <div class="button redac"><img src="img/enter.png" alt=""></div>
+      <div class="button redac"><img src="img/enter.svg" alt=""></div>
+      <div class="button redac"><img src="img/enter.svg" alt=""></div>
     </div>
     <div class="construct__footer">
       <div class="fonts">
@@ -94,9 +98,9 @@
   <div class="construct">
     <div class="construct__bg">
       <h2>Выберите дизайн</h2>
-      <img class="bg" src="img/angel.jpg" alt="">
-      <img class="bg" src="img/korp.jpg" alt="">
-      <img class="bg" src="img/gold.jpg" alt="">
+      <img class="bg" src="img/pretty image.jpeg" alt="">
+      <img class="bg" src="img/pretty image (2).jpeg" alt="">
+      <img class="bg" src="img/pretty image (1).jpeg" alt="">
     </div>
     </div>
   
@@ -104,20 +108,48 @@
    <div class="content">
       <div draggable="true" class="content__name js-drag">
         <div id='editing-name'>
-          <img src="img/pen.png" alt="">
+          <img src="img/pen.svg" alt="">
         </div>
         <h2 class="js-color contentName">C Новым Годом!</h2>
       </div>
       <div draggable="true" id="text" class="js-drag">
         <div id='editing-text'>
-          <img src="img/pen.png" alt="">
+          <img src="img/pen.svg" alt="">
         </div>
         <p class="js-color contentText">Текст поздравления</p>
       </div>
       <img draggable="false" class="js-bg" src="img/angel.jpg" alt="">
-      <img draggable="false" class="js-bg" src="img/korp.jpg" alt="">
-      <img draggable="false" class="js-bg" src="img/gold.jpg" alt="">
   </div>
+  <div class="content">
+    <div draggable="true" class="content__name js-drag">
+      <div id='editing-name'>
+        <img src="img/pen.svg" alt="">
+      </div>
+      <h2 class="js-color contentName">C Новым Годом!</h2>
+    </div>
+    <div draggable="true" id="text" class="js-drag">
+      <div id='editing-text'>
+        <img src="img/pen.svg" alt="">
+      </div>
+      <p class="js-color contentText">Текст поздравления</p>
+    </div>
+    <img draggable="false" class="js-bg" src="img/korp.jpg" alt="">
+</div>
+<div class="content">
+  <div draggable="true" class="content__name js-drag">
+    <div id='editing-name'>
+      <img src="img/pen.svg" alt="">
+    </div>
+    <h2 class="js-color contentName">C Новым Годом!</h2>
+  </div>
+  <div draggable="true" id="text" class="js-drag">
+    <div id='editing-text'>
+      <img src="img/pen.svg" alt="">
+    </div>
+    <p class="js-color contentText">Текст поздравления</p>
+  </div>
+  <img draggable="false" class="js-bg" src="img/gold.jpg" alt="">
+</div>
   <div class="cont__footer">
     <div class="cont__footer-1">
       <div class="button__text">
@@ -125,7 +157,7 @@
         <p>Сохраните получившийся результат в формате jpeg</p>
       </div>
       <div class="button" onclick='saveCanvas()'>
-      <img src="img/download.png" alt="">
+      <img src="img/download.svg" alt="">
       </div>
     </div>
     <div class="cont__footer-1">
@@ -134,13 +166,16 @@
         <p>Отправьте получившийся результат другу</p>
       </div>
       <div class="button" onclick='saveCanvas()'>
-      <img id='wa' src="img/wa.png" alt="">
+      <img id='wa' src="img/wa.svg" alt="">
       </div>
+      <a onclick="Share.vkontakte('URL','TITLE','image','DESC')" id="vk" style="width: 40px;" class="button" >
+        <img src="img/vk.svg" alt="">
+      </a>
       <div class="button" >
-        <a href="https://telegram.me/"><img src="img/telegramm.png" alt=""></a>
+        <a href="https://telegram.me/"><img src="img/telegramm.svg" alt=""></a>
       </div>
       <div class="button" onclick='saveCanvas()'>
-        <img src="img/viber.png" alt="">
+        <img src="img/viber.svg" alt="">
       </div>
     </div>
   </div>
@@ -154,7 +189,7 @@
       <p>Сохраните получившийся результат в формате jpeg</p>
     </div>
     <div class="button" onclick='saveCanvas()'>
-    <img src="img/download.png" alt="">
+    <img src="img/download.svg" alt="">
     </div>
   </div>
   <div class="cont__footer-1">
@@ -163,18 +198,21 @@
       <p>Отправьте получившийся результат другу</p>
     </div>
     <div class="button" onclick='saveCanvas()'>
-    <img src="img/wa.png" alt="">
+    <img src="img/wa.svg" alt="">
     </div>
     <div class="button">
-      <a href="https://telegram.me/only_to_top"><img src="img/telegramm.png" alt=""></a>
+      <a href="https://telegram.me/only_to_top"><img src="img/telegramm.svg" alt=""></a>
     </div>
     <div class="button" onclick='saveCanvas()'>
-      <img src="img/viber.png" alt="">
+      <img src="img/vk.svg" alt="">
+    </div>
+    <div class="button" onclick='saveCanvas()'>
+      <img src="img/viber.svg" alt="">
     </div>
   </div>
 </div>
     <div class="footer">
-      <img src="img/digital.png" alt="">
+      <img src="img/digital.svg" alt="">
     </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src='js/draggabilly.pkgd.min.js'></script>
