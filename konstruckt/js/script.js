@@ -167,17 +167,17 @@ for(let i = 0;i < document.querySelectorAll('#editing-text').length;i++){
         }
         text[i].style.cssText += 'font-size: ' + inputSize[1].value + 'px';
       })
-    for(let i = 0 ; i < posBtnText.length; i++){
-      posBtnName[i].style.display = 'none';
-      posBtnText[i].style.display = 'flex';
-      posBtnText[i].addEventListener('click', () => {
-        if(i == 0){
-          text.style.cssText += 'text-align: left;'
+    for(let r = 0 ; r < posBtnText.length; r++){
+      posBtnName[r].style.display = 'none';
+      posBtnText[r].style.display = 'flex';
+      posBtnText[r].addEventListener('click', () => {
+        if(r == 0){
+          text[i].style.cssText += 'text-align: left;'
         }
-        if(i == 1){
+        if(r == 1){
           text[i].style.cssText += 'text-align: center;'
         }
-        if(i == 2){
+        if(r == 2){
           text[i].style.cssText += 'text-align: right;'
         }
       })}
@@ -227,9 +227,14 @@ function   saveCanvas(){
   window.scrollTo(0,0);
   for(let i = 0; i < contentName.length;i++){
     document.querySelectorAll('#editing-name')[i].style.display = 'none';
-    contentName[i].style.cssText += ' border: none;';
+    //contentName[i].style.cssText += 'touch-action: none;';
+    
     document.querySelectorAll('#editing-text')[i].style.display = 'none';
-    text[i].style.cssText += ' border: none;';
+    //text[i].style.cssText += ' touch-action: none;';
+    if(win_w < 625){
+      contentName[i].style.cssText += 'border: none;';
+      text[i].style.cssText += 'border: none;';
+    }
     html2canvas(document.querySelectorAll(".content")[i]).then(canvas => {
       canvas.toBlob(function(blob) {
         console.log(blob);
@@ -244,9 +249,9 @@ function   saveCanvas(){
   window.scrollTo(0,0);
   for(let i = 0; i < contentName.length;i++){
     document.querySelectorAll('#editing-name')[i].style.display = 'none';
-    contentName[i].style.cssText += ' border: none;';
+    contentName[i].style.cssText += ' touch-action: none';
     document.querySelectorAll('#editing-text')[i].style.display = 'none';
-    text[i].style.cssText += ' border: none;';
+    text[i].style.cssText += ' touch-action: none';
     html2canvas(document.querySelectorAll(".content")[i]).then(canvas => {
        image = canvas.toDataURL("image/jpeg").replace("image/jpeg","image/octet-stream");
       console.log(image);
