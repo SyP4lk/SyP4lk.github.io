@@ -47,7 +47,8 @@ $( document ).ready(function(){
     $('.buterbroad').on('click', function() {
         if (!$(this).hasClass('clicked')) { // если класса нет
           $(this).addClass('clicked'); // добавляем класс
-          $(".mob__dropmenu").css("display","block");// код для первого клика
+          $(".mob__dropmenu").css("display","block");
+          // код для первого клика
         } else { // если есть
           $(this).removeClass('clicked'); // убираем класс
           $(".mob__dropmenu").css("display","none"); // код для второго клика
