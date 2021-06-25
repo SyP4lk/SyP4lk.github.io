@@ -74,4 +74,14 @@ $( document ).ready(function(){
           $("#reabil").css("display","none"); // код для второго клика
         }
       });
+      $(".accordion-button").on('click', function() {
+        if (!$(this).hasClass('clicked')) { // если класса нет
+          $(this).addClass('clicked'); // добавляем класс
+          $(".mob__dropmenu").css("height","100%");
+          // код для первого клика
+        } else { // если есть
+          $(this).removeClass('clicked'); // убираем класс
+          $(".mob__dropmenu").css("height","246px");// код для второго клика
+        }
+      });
   });
