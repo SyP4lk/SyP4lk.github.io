@@ -1,31 +1,28 @@
 
 $( document ).ready(function(){
+    $(".mob__dropmenu").css ("box-shadow","0 6px 4px -4px rgb(0, 0, 0 , 0.2)");
     function drop (val1,val2,val3,val4){
         $(val1).mousemove(()=>{
             $(val2).css("display","block");
-            $(val3).css("display","block");
-            $(val4).css("display","none");
+            $(val3).css("transform","scale(1, -1)");
         })
         $(val2).mousemove(()=>{
             $(val2).css("display","block");
-            $(val3).css("display","block");
-            $(val4).css("display","none");
+            $(val3).css("transform","scale(1, -1)");
         })
         $(val2).mouseout(()=>{
             $(val2).css("display","none");
-            $(val3).css("display","none");
-            $(val4).css("display","block");
+            $(val3).css("transform","");
         })
         $(val1).mouseout(()=>{
             $(val2).css("display","none");
-            $(val3).css("display","none");
-            $(val4).css("display","block");
+            $(val3).css("transform","");
         })
     }
-    drop("#js-dropdown1",".js-dm1","#arrow5","#arrow1")
-    drop("#js-dropdown2",".js-dm2","#arrow6","#arrow2")
-    drop("#js-dropdown3",".js-dm3","#arrow7","#arrow3")
-    drop("#js-dropdown4",".js-dm4","#arrow8","#arrow4")
+    drop("#js-dropdown1",".js-dm1","#arrow1")
+    drop("#js-dropdown2",".js-dm2","#arrow2")
+    drop("#js-dropdown3",".js-dm3","#arrow3")
+    drop("#js-dropdown4",".js-dm4","#arrow4")
     drop("#js-sidelki",".js-dr1")
     drop("#js-reab",".js-dr2")
 
@@ -77,11 +74,11 @@ $( document ).ready(function(){
       $(".accordion-button").on('click', function() {
         if (!$(this).hasClass('clicked')) { // если класса нет
           $(this).addClass('clicked'); // добавляем класс
-          $(".mob__dropmenu").css("height","100%");
+          $(".mob__dropmenu").css("height","1000px");
           // код для первого клика
         } else { // если есть
           $(this).removeClass('clicked'); // убираем класс
-          $(".mob__dropmenu").css("height","246px");// код для второго клика
+          $(".mob__dropmenu").css("height","262px");// код для второго клика
         }
       });
   });

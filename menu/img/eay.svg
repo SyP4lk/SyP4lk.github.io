@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="18" viewBox="0 0 36 18">
-  <defs>
-    <style>
-      .cls-1 {
-        opacity: 0.4;
-      }
-    </style>
-  </defs>
-  <image id="глаз_иконка" data-name="глаз иконка" class="cls-1" width="36" height="18" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAASCAYAAAAzI3woAAACiElEQVRIibWW30tUURDHP143qV3boBItJLNNJegh6CEljCjqxYigHnrsH+nPCXooiEgwqSBBqCgfguhBTAvUflm0lmtubjHwPTIc7t11MQcunDln7pnvmZnvnNOyfPMwTUgrcAA4COwHikA7kGiLGvATKANfgQVgEVjfrIvcJu06gWOAoW+rY5cIpH3dwAlgDZgD3gKftgrIInFSUUmTeeAb8FtrbQJddLY216/PovVKkWsKkKXhNNCTsW4peQJ8Tll7ARwHTgEt0Zod7BLwHphUehsCstQMAjuk1+S4y4G5B6xmgDX718AycEFzq0pbv9Lao+g/Uyo3JHFjA3AeGHZgZoDbkfPHdcB4mQXeSN8JfNBe75y/YfkM/jYAFYDLQEl6BRiXcyvKQ5q3Tb84p+2KwvUMUFOKmMlRpegR8NAdqiTfBRwrrgD7ZPARuKsQI3oH4LPOWU710OtYFUvFMavLrVkN3ZEv5NswFM3RSEAHTAMPgJUoCkG+u3F3xKZzYlhcyOGffLS2Il/T0g3DSEJj8TY1N44JYXVyEbgRzfum2NCfGYwCv6T3KQ15Z1Nx491ubD3oT8qe85Ee/lmLwOXlq0+6YRhNHI2XtGC5vqrwoysgiK+TigrUM85qYsLpraI3ERmM9tdcXS0JQzmE3dDdB86o6ncp/Eb759qsQ6d56aJmrLsF7FW3LkfRGXBXzZzq0XrcEWczo0NUieqgKpovuMZYEot+yMbszwJjwF/NrUenD7JH3RrVnrF1yNVRNa0xZt32ja4Oo/9T1UWadCjChYz1pq4OZGjNK+ty7dULYFFXRCjunCKTRn+2crkGsR/tS3t+GEtCZ68n//X5EcQ2sm97H2jAP7R+oAtGTynyAAAAAElFTkSuQmCC"/>
-</svg>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286.8 148.41"><defs><style>.cls-1{fill:#f37d20;}</style></defs><title>глаз</title><path class="cls-1" d="M143.4,0C73.93,0,21.89,47.09,2.74,67.33a10,10,0,0,0,0,13.75c19.14,20.24,71.19,67.33,140.66,67.33s121.51-47.09,140.66-67.33a10,10,0,0,0,0-13.75C264.91,47.09,212.87,0,143.4,0ZM79.33,35.26a80.58,80.58,0,0,0-1.64,77.1c-23.46-11.5-41.94-26.88-53.62-38.15C36,62.67,55.09,46.83,79.33,35.26ZM117.75,126c-18-9.82-29.08-29.13-29.08-50.68,0-24.61,14.62-46.23,36.42-54a132.29,132.29,0,0,1,32.07-.55c22.44,7.15,38.08,29.51,38.08,54.56,0,21.94-11.9,42-30.43,51.41a136,136,0,0,1-21.41,1.72A137.33,137.33,0,0,1,117.75,126Zm87.32-11.68a79.74,79.74,0,0,0,10.17-39,78.91,78.91,0,0,0-11.83-41.9C229.59,45.07,250.12,62,262.73,74.21,250.38,86.13,230.45,102.62,205.07,114.28Z"/><path class="cls-1" d="M167.31,75.28A25.34,25.34,0,0,1,142,50a25.32,25.32,0,1,0,25.36,25.31Z"/></svg>

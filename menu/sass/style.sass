@@ -1,6 +1,12 @@
+button
+    border: none
+    font: inherit
+    color: inherit
+    background-color: transparent
 body
     margin: 0
     padding: 0
+    font-family: Roboto
     height: 2000px
 .header
     width: 100%
@@ -9,17 +15,19 @@ body
     &__first
         width: 1200px
         margin: 0 auto
-        border-bottom: 1px solid #f37d20
+        border-bottom: 2px solid #f37d20
         padding-bottom: 16px
         display: flex
         justify-content: space-between
         align-items: center
         &__two
-            margin-top: 20px
+            margin-top: 21px
+            display: flex
+            align-items: center
             img
                 cursor: pointer
     &__descr
-        margin-top: 20px
+        margin-top: 22px
         color: #253e8e
         margin-left: -300px
         font-size: 18.5px
@@ -59,13 +67,13 @@ body
             font-size: 18px
             cursor: pointer
             font-weight: 300
-            color: #686868
+            color: #2b4386
             a
-                color: #686868
+                color: #2b4386
                 text-decoration: none
             img
                 position: absolute
-                top: 13px
+                top: 11px
                 right: -13px
             hr
                 position: absolute
@@ -90,7 +98,7 @@ body
         display: none
         top: 40px
         width: 202px
-        height: 420px
+        height: 440px
         padding-left: 17px
         padding-top: 27px
         background-color: #fff
@@ -117,18 +125,19 @@ body
         display: none
         position: absolute
         width: 210px
-        min-height: 570px
+        min-height: 600px
         background-color: #fff
         top: -75px
+        padding-left: 17px
         left: 185px
         box-shadow: 0px 2px 7px 0 rgba(0, 0, 0, 0.15)
         ul
             margin-top: 10px
             margin-left: 10px
 .js-dm2
-    height: 190px
-.js-dm3
     height: 200px
+.js-dm3
+    height: 220px
 .js-dm4
     height: 120px
 .js-dr2
@@ -142,13 +151,23 @@ body
     display: none
 #arrow8
     display: none
+#mob-prot1
+    border-bottom: none !important
+#js-reab1
+    border-bottom: none !important
+#mob-mew
+    border-bottom: none !important
+#js-sidelki1
+    border-bottom: none !important
 
 .mobile-header
     display: none
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2)
     width: 100%
-    margin-top: 20px
-    padding-bottom: 20px
+    position: relative
+    z-index: 2
+    margin-top: 30px
+    padding-bottom: 7px
     .header__buttons
         width: 430px
         margin: 0 auto
@@ -177,12 +196,18 @@ body
     background-color: #fff
 .accordion-button
     color: #2b4386
+    font-weight: normal
+    font-size: 18px
     padding: 10px 0px 10px 22px
 .accordion-item
     border: none
-    border-bottom: 1px solid #2b43866e
+    border-bottom: 2px solid #2b438633 !important
+    &:nth-child(6)
+        border-bottom: none !important
 .accordion-button::after
     margin-right: 33px
+.accordion-button:not(.collapsed)
+    box-shadow: none !important
 .accordion-body
     padding: 0
     ul
@@ -190,10 +215,15 @@ body
         li
             list-style: none
             padding: 10px 0px 10px 0px
+            border-bottom: 2px solid #2b438633 !important
             &:nth-child(7)
-                border-bottom: none
+                border-bottom: none !important
+            &:nth-child(1)
+                border-top: 2px solid #2b438656 !important
             a
                 text-decoration: none
+                font-weight: normal
+                font-size: 18px
                 color: #2b4386
                 margin-left: 60px
 .card-body
@@ -202,7 +232,7 @@ body
     ul
         li
             &:nth-child(10)
-                border-bottom: none
+                border-bottom: none !important
             &:nth-child(7)
                 border-bottom: 1px solid #2b43866e
             &:nth-child(1)
@@ -211,6 +241,20 @@ body
                 margin-left: 100px
 #mob-prot
     border-bottom: none
+.accordion-button::after
+    background-image: url(../img/arrow_open.svg) 
+    background-repeat: no-repeat
+    width: 9px
+    height: 5px
+    background-size: contain
+button:not(.collapsed)::after
+    background-image: url(../img/arrow_open.svg) !important
+.accordion-body
+    .clicked
+        color: #f37c1f !important
+    a
+        &:hover
+            color: #f37c1f !important   
 .accordion
     width: 90%
     margin: 0 auto
@@ -255,16 +299,16 @@ body
         margin: 0 auto
         display: flex
         justify-content: space-between
-        align-items: center
+        align-items: flex-start
     &__dropmenu
         display: none
         margin-top: 10px
-        border-top: 1px solid rgba(0, 0, 0, .2)
-        border-bottom: 1px solid rgba(0, 0, 0, .2)
         position: absolute
+        z-index: 1
+        top: 130px
         width: 100%
         background-color: #fff
-        height: 246px
+        height: 262px
         transition-duration: .4s
         .header__menu
             height: 100%
@@ -307,9 +351,9 @@ body
         margin-top: 10px
         text-transform: uppercase
     &__phone
+        padding-top: 8px
         margin: 0
 .buterbroad
-    margin-bottom: 10px
     section
         width: 25px
         height: 4px
@@ -383,7 +427,6 @@ body
             font-size: 13px
             cursor: pointer
             font-weight: 300
-            color: #686868
             &:nth-child(3)
                 width: 40px
                 
@@ -415,6 +458,8 @@ body
         display: none
     .mobile-header
         display: block
+    .mob__dropmenu
+        top: 140px
         
 
 @media screen and ( max-width:  484px)
@@ -425,7 +470,7 @@ body
             margin: 0 auto
             display: flex
             justify-content: space-between
-            align-items: center
+            align-items: flex-start
             img
                 width: 100px
             .header__phone
@@ -439,6 +484,8 @@ body
         justify-content: space-between
         button
             font-size: 12px
+    .mob__dropmenu
+        top: 123px
 @media screen and ( max-width:369px  )
     .accordion-body
         ul
