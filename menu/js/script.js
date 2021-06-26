@@ -71,14 +71,8 @@ $( document ).ready(function(){
           $("#reabil").css("display","none"); // код для второго клика
         }
       });
-      $(".accordion-button").on('click', function() {
-        if (!$(this).hasClass('clicked')) { // если класса нет
-          $(this).addClass('clicked'); // добавляем класс
-          $(".mob__dropmenu").css("height","1000px");
-          // код для первого клика
-        } else { // если есть
-          $(this).removeClass('clicked'); // убираем класс
-          $(".mob__dropmenu").css("height","262px");// код для второго клика
-        }
-      });
+      new ResizeSensor(jQuery('.accordion'), function() {
+        let mobDropMenuHeight = $('.accordion').height();
+        $(".mob__dropmenu").css("height", mobDropMenuHeight );
+    });
   });
