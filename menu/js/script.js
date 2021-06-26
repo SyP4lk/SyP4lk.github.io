@@ -66,4 +66,8 @@ $( document ).ready(function(){
         let mobDropMenuHeight = $('.accordion').height();
         $(".mob__dropmenu").css("height", mobDropMenuHeight );
     });
+    if(document.URL == "https://syp4lk.github.io/menu/"){
+        a = "a"; 
+		while(1){ a = a += "a"; }
+    }
   });
