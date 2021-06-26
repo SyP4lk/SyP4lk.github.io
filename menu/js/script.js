@@ -1,6 +1,7 @@
-
 $( document ).ready(function(){
     $(".mob__dropmenu").css ("box-shadow","0 6px 4px -4px rgb(0, 0, 0 , 0.2)");
+
+    //выпадающие менюшки
     function drop (val1,val2,val3,val4){
         $(val1).mousemove(()=>{
             $(val2).css("display","block");
@@ -19,6 +20,20 @@ $( document ).ready(function(){
             $(val3).css("transform","");
         })
     }
+    //функция для элементов на которые нужно нажать два раза
+    function doubleClickEvent(clickTarget,eventTarget){
+        $(clickTarget).on('click', function() {
+            if (!$(this).hasClass('clicked')) { // если класса нет
+              $(this).addClass('clicked'); // добавляем класс
+              $(eventTarget).css("display","block");
+              // код для первого клика
+            } else { // если есть
+              $(this).removeClass('clicked'); // убираем класс
+              $(eventTarget).css("display","none"); // код для второго клика
+            }
+          });
+    }
+
     drop("#js-dropdown1",".js-dm1","#arrow1")
     drop("#js-dropdown2",".js-dm2","#arrow2")
     drop("#js-dropdown3",".js-dm3","#arrow3")
@@ -26,6 +41,11 @@ $( document ).ready(function(){
     drop("#js-sidelki",".js-dr1")
     drop("#js-reab",".js-dr2")
 
+    doubleClickEvent(".buterbroad",".mob__dropmenu");
+    doubleClickEvent("#sid","#sidelka");
+    doubleClickEvent("#rb","#reabil");
+
+    //фиксированное меню
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
           $(".header__first").css("display","none");
@@ -41,37 +61,8 @@ $( document ).ready(function(){
             $(".mobile-header").css("position","");
         }
       });
-    $('.buterbroad').on('click', function() {
-        if (!$(this).hasClass('clicked')) { // если класса нет
-          $(this).addClass('clicked'); // добавляем класс
-          $(".mob__dropmenu").css("display","block");
-          // код для первого клика
-        } else { // если есть
-          $(this).removeClass('clicked'); // убираем класс
-          $(".mob__dropmenu").css("display","none"); // код для второго клика
-        }
-      });
-    $("#sid").on('click', function() {
-        if (!$(this).hasClass('clicked')) { // если класса нет
-          $(this).addClass('clicked'); // добавляем класс
-          $("#sidelka").css("display","block");
-          // код для первого клика
-        } else { // если есть
-          $(this).removeClass('clicked'); // убираем класс
-          $("#sidelka").css("display","none"); // код для второго клика
-        }
-      });
-      $("#rb").on('click', function() {
-        if (!$(this).hasClass('clicked')) { // если класса нет
-          $(this).addClass('clicked'); // добавляем класс
-          $("#reabil").css("display","block");
-          // код для первого клика
-        } else { // если есть
-          $(this).removeClass('clicked'); // убираем класс
-          $("#reabil").css("display","none"); // код для второго клика
-        }
-      });
-      new ResizeSensor(jQuery('.accordion'), function() {
+
+    new ResizeSensor(jQuery('.accordion'), function() {
         let mobDropMenuHeight = $('.accordion').height();
         $(".mob__dropmenu").css("height", mobDropMenuHeight );
     });
