@@ -31,9 +31,24 @@ $( document ).ready(function(){
               $(this).removeClass('clicked'); // убираем класс
               $(eventTarget).css("display","none"); // код для второго клика
             }
+            if (($(this).is("#sid")) && (!$(this).hasClass('click'))){
+                $("#arrow_sid").css("transform","rotate(180deg)");
+                $(this).addClass('click');
+            } else{
+                $(this).removeClass('click');
+                $("#arrow_sid").css("transition" , ".3s");
+                $("#arrow_sid").css("transform","rotate(0deg)");
+            }
+            if (($(this).is("#rb")) && (!$(this).hasClass('clickRb'))){
+                $("#arrow_rb").css("transform","rotate(180deg)");
+                $(this).addClass('clickRb');
+            } else{
+                $(this).removeClass('clickRb');
+                $("#arrow_rb").css("transition" , ".3s");
+                $("#arrow_rb").css("transform","rotate(0deg)");
+            }
           });
     }
-
     drop("#js-dropdown1",".js-dm1","#arrow1")
     drop("#js-dropdown2",".js-dm2","#arrow2")
     drop("#js-dropdown3",".js-dm3","#arrow3")
