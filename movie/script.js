@@ -1,16 +1,5 @@
 $(document).ready(function () {
-	const button = document.querySelector(".button-red-gradient']");
-
-    function sendHeight() {
-    const height = document.body.scrollHeight;
-    parent.postMessage({ type: "resizeIframe", height: height }, "*");
-  }
-
-  // Пример: вызываем при нажатии кнопки
-  document.querySelector("button").addEventListener("click", sendHeight);
-
-  // Также можно вызвать при загрузке
-  window.onload = sendHeight;
+	
 	 var copart = [{
                 from: 0.01,
                 to: 49.99,
