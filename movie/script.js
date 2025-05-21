@@ -1198,22 +1198,20 @@ $(document).ready(function () {
 
         var recycling = Math.round(parseInt($('.costs-recycling').text()) / usdRate);
         var declarant = Math.round(parseInt($('#calc_type').find(':selected').data('declarant')) / usdRate);
-        var service = Math.round(parseInt($('#calc_service').find(':selected').data('price')) / usdRate);
 
         $('.customs-declarant').text($('#calc_type').find(':selected').data('declarant'))
-        $('.costs-service').text($('#calc_service').find(':selected').data('price'))
         
          if (type == 'moto' || type == 'quad') {
-            var final = price + fee + deliveryToPort + deliveryToMinsk + customsTotal + customsCosts + recycling + declarant + service + 350;
-            var final1 = price + fee + deliveryToPort + deliveryToMinsk  + customsTotal + customsCosts + recycling + declarant + service + 1750;
+            var final = price + fee + deliveryToPort + deliveryToMinsk + customsTotal + customsCosts + recycling + declarant + 350;
+            var final1 = price + fee + deliveryToPort + deliveryToMinsk  + customsTotal + customsCosts + recycling + declarant  + 1750;
         } else {
-            var final = price + fee + deliveryToPort + deliveryToMinsk + customsTotal + customsCosts + recycling + declarant + service + 350;
-            var final1 = price + fee + deliveryToPort + deliveryToMinsk  + customsTotal + customsCosts + recycling + declarant + service + 2150;
+            var final = price + fee + deliveryToPort + deliveryToMinsk + customsTotal + customsCosts + recycling + declarant  + 350;
+            var final1 = price + fee + deliveryToPort + deliveryToMinsk  + customsTotal + customsCosts + recycling + declarant  + 2150;
         }
 
         
 
-        console.log(price, fee, deliveryToPort, deliveryToMinsk, customsTotal, customsCosts, recycling, declarant, service)
+        console.log(price, fee, deliveryToPort, deliveryToMinsk, customsTotal, customsCosts, recycling, declarant)
 
 //         $('.costs-total').text(prettify(final));
 			$('.costs-total').text(final);
