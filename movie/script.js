@@ -1,4 +1,18 @@
 $(document).ready(function () {
+	const button = document.querySelector("button[type='submit']");
+
+    if (button) {
+      button.addEventListener("click", function () {
+        // Посылаем сообщение родителю (Wix-сайту)
+        window.parent.postMessage(
+          {
+            type: "resizeIframe",
+            height: document.body.scrollHeight // или фиксированное значение, например: 800
+          },
+          "*"
+        );
+      });
+    }
 	 var copart = [{
                 from: 0.01,
                 to: 49.99,
