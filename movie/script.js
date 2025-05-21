@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	const button = document.querySelector("button[type='submit']");
+	const button = document.querySelector(".button-red-gradient']");
 
     if (button) {
       button.addEventListener("click", function () {
