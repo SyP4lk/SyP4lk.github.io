@@ -1,147 +1,481 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie</title>
-    <link rel="stylesheet" href="css/fontstye.css">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/fakeLoader.css">
-    <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор авто из США</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="fakeLoader"></div>
-    <div class="header">
-        <img src="icons/logo.png" alt="logo" class="header__logo"> 
-        <div class="header__nav"> 
-            <img src="icons/comics.png" alt="" class="header__nav">
-            <img src="icons/video.png" alt="" class="header__nav">
-            <img src="icons/movie icon.png" alt="" class="header__nav">
-            <img src="icons/game.png" alt="" class="header__nav">
-            <img src="icons/tv.png" alt="" class="header__nav">
-            <img src="icons/more.png" alt="" class="header__nav">
-        </div>
-        <div class="header__profile">
-            <img src="icons/user_photo.png" alt="" class="header__profile-photo">
-            <div class="header__profile-name">Carol Danvers</div>
-            <img src="icons/edit profile.png" alt="" class="header__profile-edit">
-        </div>
-    </div>
 
-    <div class="mainFilm">
-
-
-        <div class="mainFilm__logo">
-            <img src="img/main_movie_logo.png" alt="" class="mainFilm_img">
-            <button class="button" id="mainFilm_button">Watch now</button>
-        </div>
-
-        <div class="mainFilm__actors">
-            <div class="circle circle1"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
-
-
-        <div class="mainFilm__footer">
-            <div class="mainFilm__info">
-                <div class="mainFilm__published">Published <span>Feb 20, 2014</span></div>
-                <div class="mainFilm__update">Updated <span>Feb 20, 2014</span></div>
-            </div>
-        </div>
-
-        <img src="img/bg.jpg" alt="" class="mainFilm__bg">
-    </div>
-
-    <div class="movies">
-        <div class="movies__header">
-            <div class="movies__descr">FEATURED MOVIES</div>
-            <div class="movies__tabs">
-                <div class="movies__realised active">New Realised</div>
-                <span> / </span>
-                <div class="movies__trailers">railers & Clips</div>
-            </div>
-            <form class="movies__search" action="" method="get">
-                <input class="movies__input" name="s" placeholder="Search..." type="search">
-                <button class="movies__icon" type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-
-        <div class="movies__wrapper">
-            <div class="movies__content">
-                <div class="info" id="guardian_info">
-                    <div class="guardian__raiting">
-                        <div id="guardian_info_like">
-                            <img src="icons/like.png" alt="">
-                            <span class="info__score">3,545</span>
-                        </div>
-                        <div id="guardian_info_comments">
-                            <img src="icons/comments.png" alt="">
-                            <span class="info__score">58</span>
-                        </div>
-                        <div id="guardian_info_download">
-                            <img src="icons/downloads_red.png" alt="">
-                            <span class="info__score">642</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movies__main" id="guardian">
-                    <div class="movies__head">
-                        <div id="guardian__like">
-                            <img src="icons/like.png" alt="">
-                            <span id="guardian__score">3,545</span>
-                        </div>
-                        <div id="guardian__download"><img src="icons/download.png" alt=""></div>
-                    </div>
-                    <div id="guardian__name">Guardians of the Galaxy</div>
-                </div>
-            </div>
-    
-            <div class="movies__content">
-                <div class="info" id="spider_info">
-                    <div class="info__raiting">
-                        <div id="spider_info_like">
-                            <img src="icons/like.png" alt="">
-                            <span class="info__score">3,545</span>
-                        </div>
-                        <div id="spider_info_comments">
-                            <img src="icons/comments.png" alt="">
-                            <span class="info__score">58</span>
-                        </div>
-                        <div id="spider_info_download">
-                            <img src="icons/downloads_red.png" alt="">
-                            <span class="info__score">642</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="movies__main" id="spider">
-                    <div class="movies__head">
-                        <div id="spider__like">
-                            <img src="icons/like.png" alt="">
-                            <span id="spider__score">3,545</span>
-                        </div>
-                        <div id="spider__download"><img src="icons/download.png" alt=""></div>
-                    </div>
-                    <div id="spider__name">The Amazing Spider-Man 2</div>
-                </div>
-            </div>
-        </div>
-    
-        
-    </div>
-    
-
-
-
-
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/fakeLoader.js"></script>
-    <script src="js/scritp.js"></script>
+<section class="customs-calculator customs-calculator-costs">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h2 class="customs">Калькулятор всех расходов автомобиля</h2></div>
+		</div>
+		<div class="calculator">
+			<div class="calculator__all">
+				<div class="calculator__header calculator__header-costs">
+					<div class="form">
+						<h3>Покупка и доставка</h3></div>
+					<div class="form">
+						<label> Тип транспорта:
+							<select name="calc_type" id="calc_type">
+								<option data-type="auto" data-declarant="430">Автомобили</option>
+								<option data-type="moto" data-declarant="280">Мотоцикл</option>
+								<option data-type="quad" data-declarant="280">Квадроцикл</option>
+							</select>
+						</label>
+						<label> Площадка:
+							<select name="calc_place" id="calc_place">
+								<option value="Abilene - TX" data-auto="800" data-moto="550" data-klaipeda="825" data-minsk="2750">Abilene - TX</option>
+								<option value="ACE - Carson (CA)" data-auto="600" data-moto="600" data-klaipeda="950" data-minsk="3350">ACE - Carson (CA)</option>
+								<option value="ACE-PERRIS" data-auto="725" data-moto="725" data-klaipeda="950" data-minsk="3350">ACE-PERRIS</option>
+								<option value="Adamsburg" data-auto="850" data-moto="550" data-klaipeda="0" data-minsk="2675">Adamsburg</option>
+								<option value="ADELANTO - CA" data-auto="800" data-moto="750" data-klaipeda="0" data-minsk="3100">ADELANTO - CA</option>
+								<option value="Akron Canton - OH" data-auto="1000" data-moto="550" data-klaipeda="825" data-minsk="2675">Akron Canton - OH</option>
+								<option value="Albany - NY" data-auto="725" data-moto="475" data-klaipeda="750" data-minsk="2675">Albany - NY</option>
+								<option value="Albuquerque - NM" data-auto="1050" data-moto="850" data-klaipeda="850" data-minsk="2750">Albuquerque - NM</option>
+								<option value="Altoona - PA" data-auto="675" data-moto="575" data-klaipeda="720" data-minsk="2675">Altoona - PA</option>
+								<option value="Amarillo - TX" data-auto="975" data-moto="625" data-klaipeda="775" data-minsk="2750">Amarillo - TX</option>
+								<option value="Anaheim - CA" data-auto="630" data-moto="600" data-klaipeda="950" data-minsk="3350">Anaheim - CA</option>
+								<option value="Anchorage" data-auto="2300" data-moto="1885" data-klaipeda="0" data-minsk="3700">Anchorage</option>
+								<option value="Andrews - TX" data-auto="875" data-moto="600" data-klaipeda="825" data-minsk="2750">Andrews - TX</option>
+								<option value="Antelope - CA" data-auto="825" data-moto="700" data-klaipeda="950" data-minsk="3350">Antelope - CA</option>
+								<option value="Appleton - WI" data-auto="775" data-moto="450" data-klaipeda="950" data-minsk="2875">Appleton - WI</option>
+								<option value="Asheville - NC" data-auto="825" data-moto="500" data-klaipeda="725" data-minsk="2675">Asheville - NC</option>
+								<option value="Ashland - KY" data-auto="680" data-moto="650" data-klaipeda="900" data-minsk="2875">Ashland - KY</option>
+								<option value="Atlanta - GA" data-auto="725" data-moto="475" data-klaipeda="750" data-minsk="2675">Atlanta - GA</option>
+								<option value="Atlanta East - GA" data-auto="725" data-moto="475" data-klaipeda="750" data-minsk="2675">Atlanta East - GA</option>
+								<option value="Atlanta East Stars - GA" data-auto="725" data-moto="475" data-klaipeda="750" data-minsk="2675">Atlanta East Stars - GA</option>
+								<option value="Atlanta North - GA" data-auto="725" data-moto="475" data-klaipeda="750" data-minsk="2675">Atlanta North - GA</option>
+								<option value="Atlanta South - GA" data-auto="725" data-moto="475" data-klaipeda="750" data-minsk="2675">Atlanta South - GA</option>
+								<option value="Atlanta West - GA" data-auto="725" data-moto="475" data-klaipeda="750" data-minsk="2675">Atlanta West - GA</option>
+								<option value="Augusta" data-auto="700" data-moto="415" data-klaipeda="0" data-minsk="2675">Augusta</option>
+								<option value="Austin - TX" data-auto="700" data-moto="425" data-klaipeda="850" data-minsk="2750">Austin - TX</option>
+								<option value="Avenell - NJ" data-auto="600" data-moto="375" data-klaipeda="720" data-minsk="2675">Avenell - NJ</option>
+								<option value="Bakersfield - CA" data-auto="750" data-moto="650" data-klaipeda="925" data-minsk="3350">Bakersfield - CA</option>
+								<option value="Baltimore - MD" data-auto="725" data-moto="475" data-klaipeda="765" data-minsk="2675">Baltimore - MD</option>
+								<option value="Bangor" data-auto="825" data-moto="575" data-klaipeda="0" data-minsk="2675">Bangor</option>
+								<option value="Baton Rouge - LA" data-auto="750" data-moto="500" data-klaipeda="850" data-minsk="2750">Baton Rouge - LA</option>
+								<option value="Bay Area" data-auto="750" data-moto="750" data-klaipeda="0" data-minsk="3350">Bay Area</option>
+								<option value="Billings - MT" data-auto="1200" data-moto="1175" data-klaipeda="1100" data-minsk="3700">Billings - MT</option>
+								<option value="Birmingham - AL" data-auto="800" data-moto="550" data-klaipeda="725" data-minsk="2675">Birmingham - AL</option>
+								<option value="Boise - ID" data-auto="900" data-moto="850" data-klaipeda="1150" data-minsk="3700">Boise - ID</option>
+								<option value="Boston" data-auto="825" data-moto="500" data-klaipeda="0" data-minsk="2675">Boston</option>
+								<option value="Boston-Shirley - MA" data-auto="825" data-moto="500" data-klaipeda="700" data-minsk="2675">Boston-Shirley - MA</option>
+								<option value="Bowling Green - KY" data-auto="875" data-moto="610" data-klaipeda="875" data-minsk="2875">Bowling Green - KY</option>
+								<option value="Bridgeport - PA" data-auto="670" data-moto="400" data-klaipeda="775" data-minsk="2675">Bridgeport - PA</option>
+								<option value="Bridgeview" data-auto="600" data-moto="550" data-klaipeda="0" data-minsk="2875">Bridgeview</option>
+								<option value="Buckhannon - WV" data-auto="1025" data-moto="700" data-klaipeda="750" data-minsk="2675">Buckhannon - WV</option>
+								<option value="Buffalo - NY" data-auto="950" data-moto="625" data-klaipeda="690" data-minsk="2675">Buffalo - NY</option>
+								<option value="Burlington - VT" data-auto="925" data-moto="650" data-klaipeda="675" data-minsk="2675">Burlington - VT</option>
+								<option value="Calgary" data-auto="2000" data-moto="1800" data-klaipeda="0" data-minsk="3050">Calgary</option>
+								<option value="Candia - NH" data-auto="825" data-moto="630" data-klaipeda="700" data-minsk="2675">Candia - NH</option>
+								<option value="Cartersville - GA" data-auto="750" data-moto="500" data-klaipeda="625" data-minsk="2675">Cartersville - GA</option>
+								<option value="Casper - WY" data-auto="1550" data-moto="1650" data-klaipeda="0" data-minsk="2580">Casper - WY</option>
+								<option value="Central New Jersey - NJ" data-auto="525" data-moto="375" data-klaipeda="700" data-minsk="2675">Central New Jersey - NJ</option>
+								<option value="Chambersburg - PA" data-auto="700" data-moto="600" data-klaipeda="740" data-minsk="2675">Chambersburg - PA</option>
+								<option value="Charleston - SC" data-auto="725" data-moto="450" data-klaipeda="700" data-minsk="2675">Charleston - SC</option>
+								<option value="Charleston - WV" data-auto="1025" data-moto="700" data-klaipeda="725" data-minsk="2650">Charleston - WV</option>
+								<option value="Charlotte - NC" data-auto="725" data-moto="475" data-klaipeda="800" data-minsk="2675">Charlotte - NC</option>
+								<option value="Chatanooga - TN" data-auto="800" data-moto="510" data-klaipeda="700" data-minsk="2675">Chatanooga - TN</option>
+								<option value="Chicago North - IL" data-auto="600" data-moto="380" data-klaipeda="850" data-minsk="2875">Chicago North - IL</option>
+								<option value="Chicago South - IL" data-auto="630" data-moto="380" data-klaipeda="850" data-minsk="2875">Chicago South - IL</option>
+								<option value="Chicago West - IL" data-auto="600" data-moto="380" data-klaipeda="850" data-minsk="2875">Chicago West - IL</option>
+								<option value="China Grove - NC" data-auto="725" data-moto="475" data-klaipeda="725" data-minsk="2675">China Grove - NC</option>
+								<option value="Cicero" data-auto="825" data-moto="450" data-klaipeda="0" data-minsk="2875">Cicero</option>
+								<option value="Cincinnati - OH" data-auto="1000" data-moto="570" data-klaipeda="875" data-minsk="2675">Cincinnati - OH</option>
+								<option value="Cincinnati South - OH" data-auto="1000" data-moto="575" data-klaipeda="875" data-minsk="2675">Cincinnati South - OH</option>
+								<option value="Clayton" data-auto="725" data-moto="500" data-klaipeda="0" data-minsk="2675">Clayton</option>
+								<option value="Clearwater - FL" data-auto="725" data-moto="460" data-klaipeda="775" data-minsk="2675">Clearwater - FL</option>
+								<option value="Cleveland - OH" data-auto="1000" data-moto="550" data-klaipeda="800" data-minsk="2675">Cleveland - OH</option>
+								<option value="Cleveland East - OH" data-auto="900" data-moto="550" data-klaipeda="850" data-minsk="2750">Cleveland East - OH</option>
+								<option value="Cleveland West - OH" data-auto="900" data-moto="550" data-klaipeda="850" data-minsk="2750">Cleveland West - OH</option>
+								<option value="Clinton" data-auto="880" data-moto="515" data-klaipeda="0" data-minsk="2675">Clinton</option>
+								<option value="COLORADO SPRINGS - CO" data-auto="1100" data-moto="1000" data-klaipeda="900" data-minsk="3350">COLORADO SPRINGS - CO</option>
+								<option value="Columbia - MO" data-auto="825" data-moto="630" data-klaipeda="925" data-minsk="2575">Columbia - MO</option>
+								<option value="Columbia - SC" data-auto="725" data-moto="450" data-klaipeda="690" data-minsk="2675">Columbia - SC</option>
+								<option value="Columbus - OH" data-auto="1000" data-moto="550" data-klaipeda="825" data-minsk="2675">Columbus - OH</option>
+								<option value="Concord - NC" data-auto="725" data-moto="475" data-klaipeda="725" data-minsk="2675">Concord - NC</option>
+								<option value="Corpus Christi - TX" data-auto="725" data-moto="475" data-klaipeda="825" data-minsk="2800">Corpus Christi - TX</option>
+								<option value="Culpeper - VA" data-auto="800" data-moto="510" data-klaipeda="850" data-minsk="2675">Culpeper - VA</option>
+								<option value="Dallas - TX" data-auto="725" data-moto="435" data-klaipeda="825" data-minsk="2675">Dallas - TX</option>
+								<option value="Dallas South-TX" data-auto="725" data-moto="435" data-klaipeda="0" data-minsk="2675">Dallas South-TX</option>
+								<option value="Dallas/Ft.Worth - TX" data-auto="725" data-moto="435" data-klaipeda="825" data-minsk="2675">Dallas/Ft.Worth - TX</option>
+								<option value="Danville - VA" data-auto="825" data-moto="530" data-klaipeda="950" data-minsk="2675">Danville - VA</option>
+								<option value="Davenport - IA" data-auto="775" data-moto="485" data-klaipeda="825" data-minsk="2775">Davenport - IA</option>
+								<option value="Dayton - OH" data-auto="1000" data-moto="550" data-klaipeda="725" data-minsk="2675">Dayton - OH</option>
+								<option value="Denver - CO" data-auto="1100" data-moto="900" data-klaipeda="970" data-minsk="2750">Denver - CO</option>
+								<option value="Denver South-CO" data-auto="1100" data-moto="900" data-klaipeda="0" data-minsk="2750">Denver South-CO</option>
+								<option value="Des Moines - IA" data-auto="825" data-moto="500" data-klaipeda="975" data-minsk="2825">Des Moines - IA</option>
+								<option value="Detroit - MI" data-auto="825" data-moto="500" data-klaipeda="850" data-minsk="2925">Detroit - MI</option>
+								<option value="Dothan - AL" data-auto="800" data-moto="550" data-klaipeda="725" data-minsk="2675">Dothan - AL</option>
+								<option value="Dundalk - MD" data-auto="725" data-moto="475" data-klaipeda="675" data-minsk="2625">Dundalk - MD</option>
+								<option value="Dyer" data-auto="600" data-moto="350" data-klaipeda="0" data-minsk="2875">Dyer</option>
+								<option value="DYER -IN" data-auto="675" data-moto="478" data-klaipeda="700" data-minsk="2800">DYER -IN</option>
+								<option value="Earlington" data-auto="900" data-moto="575" data-klaipeda="0" data-minsk="2675">Earlington</option>
+								<option value="East Bay - CA" data-auto="850" data-moto="750" data-klaipeda="925" data-minsk="3350">East Bay - CA</option>
+								<option value="Edmonton" data-auto="2300" data-moto="1800" data-klaipeda="0" data-minsk="2750">Edmonton</option>
+								<option value="El Paso - TX" data-auto="875" data-moto="625" data-klaipeda="800" data-minsk="2750">El Paso - TX</option>
+								<option value="Elkton - MD" data-auto="725" data-moto="475" data-klaipeda="0" data-minsk="2625">Elkton - MD</option>
+								<option value="Englishtown" data-auto="625" data-moto="380" data-klaipeda="0" data-minsk="2675">Englishtown</option>
+								<option value="Erie - PA" data-auto="950" data-moto="600" data-klaipeda="700" data-minsk="2675">Erie - PA</option>
+								<option value="Essex" data-auto="765" data-moto="450" data-klaipeda="0" data-minsk="2675">Essex</option>
+								<option value="Eugene - OR" data-auto="825" data-moto="700" data-klaipeda="1040" data-minsk="3700">Eugene - OR</option>
+								<option value="Exeter - RI" data-auto="800" data-moto="700" data-klaipeda="750" data-minsk="2675">Exeter - RI</option>
+								<option value="Fairburn" data-auto="725" data-moto="475" data-klaipeda="0" data-minsk="2775">Fairburn</option>
+								<option value="Fargo - ND" data-auto="1050" data-moto="750" data-klaipeda="950" data-minsk="2875">Fargo - ND</option>
+								<option value="Fayetteville - AR" data-auto="925" data-moto="625" data-klaipeda="800" data-minsk="2650">Fayetteville - AR</option>
+								<option value="Flint - MI" data-auto="875" data-moto="525" data-klaipeda="895" data-minsk="2875">Flint - MI</option>
+								<option value="Fontana - CA" data-auto="630" data-moto="630" data-klaipeda="0" data-minsk="3350">Fontana - CA</option>
+								<option value="Fort Wayne - IN" data-auto="750" data-moto="450" data-klaipeda="975" data-minsk="2675">Fort Wayne - IN</option>
+								<option value="Fort Worth North" data-auto="725" data-moto="435" data-klaipeda="0" data-minsk="2750">Fort Worth North</option>
+								<option value="Four Oaks, NC" data-auto="650" data-moto="425" data-klaipeda="0" data-minsk="2675">Four Oaks, NC</option>
+								<option value="Fredericksburg-South - VA" data-auto="775" data-moto="510" data-klaipeda="750" data-minsk="2675">Fredericksburg-South - VA</option>
+								<option value="Fredericksburg-VA" data-auto="775" data-moto="510" data-klaipeda="0" data-minsk="2675">Fredericksburg-VA</option>
+								<option value="Freetown" data-auto="825" data-moto="500" data-klaipeda="0" data-minsk="2675">Freetown</option>
+								<option value="Fremont - CA" data-auto="850" data-moto="750" data-klaipeda="925" data-minsk="3350">Fremont - CA</option>
+								<option value="Fresno - CA" data-auto="825" data-moto="750" data-klaipeda="950" data-minsk="3350">Fresno - CA</option>
+								<option value="Ft. Pierce - FL" data-auto="800" data-moto="480" data-klaipeda="800" data-minsk="2675">Ft. Pierce - FL</option>
+								<option value="Ft. Worth - TX" data-auto="725" data-moto="480" data-klaipeda="825" data-minsk="2750">Ft. Worth - TX</option>
+								<option value="Ft.Lauderdale" data-auto="680" data-moto="465" data-klaipeda="0" data-minsk="2675">Ft.Lauderdale</option>
+								<option value="Gastonia" data-auto="750" data-moto="500" data-klaipeda="0" data-minsk="2675">Gastonia</option>
+								<option value="Glassboro East - NJ" data-auto="650" data-moto="415" data-klaipeda="765" data-minsk="2675">Glassboro East - NJ</option>
+								<option value="Glassboro West" data-auto="650" data-moto="415" data-klaipeda="0" data-minsk="2675">Glassboro West</option>
+								<option value="Golden Gate" data-auto="775" data-moto="690" data-klaipeda="0" data-minsk="3350">Golden Gate</option>
+								<option value="Graham - WA" data-auto="575" data-moto="750" data-klaipeda="1250" data-minsk="3700">Graham - WA</option>
+								<option value="Grand Island" data-auto="1150" data-moto="850" data-klaipeda="0" data-minsk="2675">Grand Island</option>
+								<option value="Grand Rapids - MI" data-auto="1150" data-moto="500" data-klaipeda="925" data-minsk="2675">Grand Rapids - MI</option>
+								<option value="Greensboro - NC" data-auto="725" data-moto="475" data-klaipeda="775" data-minsk="2675">Greensboro - NC</option>
+								<option value="Greenville - SC" data-auto="700" data-moto="475" data-klaipeda="775" data-minsk="2675">Greenville - SC</option>
+								<option value="Greer - SC" data-auto="725" data-moto="450" data-klaipeda="725" data-minsk="2675">Greer - SC</option>
+								<option value="Grenada - MS" data-auto="875" data-moto="600" data-klaipeda="825" data-minsk="2675">Grenada - MS</option>
+								<option value="Gulf Coast - MS" data-auto="775" data-moto="575" data-klaipeda="775" data-minsk="2675">Gulf Coast - MS</option>
+								<option value="Gulfport" data-auto="800" data-moto="485" data-klaipeda="0" data-minsk="2675">Gulfport</option>
+								<option value="Hammond" data-auto="600" data-moto="380" data-klaipeda="975" data-minsk="2875">Hammond</option>
+								<option value="Hampton - VA" data-auto="800" data-moto="510" data-klaipeda="800" data-minsk="2675">Hampton - VA</option>
+								<option value="Harrisburg - PA" data-auto="725" data-moto="475" data-klaipeda="750" data-minsk="2675">Harrisburg - PA</option>
+								<option value="Hartford South - CT" data-auto="675" data-moto="425" data-klaipeda="750" data-minsk="2875">Hartford South - CT</option>
+								<option value="HartFord Springfield- CT" data-auto="675" data-moto="425" data-klaipeda="750" data-minsk="2875">HartFord Springfield- CT</option>
+								<option value="Hatward" data-auto="1440" data-moto="1150" data-klaipeda="0" data-minsk="2875">Hatward</option>
+								<option value="Hayward - CA" data-auto="1440" data-moto="750" data-klaipeda="950" data-minsk="2875">Hayward - CA</option>
+								<option value="Helena - MT" data-auto="1050" data-moto="1135" data-klaipeda="1200" data-minsk="3700">Helena - MT</option>
+								<option value="High Desert - CA" data-auto="750" data-moto="700" data-klaipeda="950" data-minsk="3350">High Desert - CA</option>
+								<option value="Honolulu - HI" data-auto="2050" data-moto="1450" data-klaipeda="950" data-minsk="3350">Honolulu - HI</option>
+								<option value="Houston - TX" data-auto="650" data-moto="400" data-klaipeda="800" data-minsk="2750">Houston - TX</option>
+								<option value="Houston North - TX" data-auto="650" data-moto="400" data-klaipeda="800" data-minsk="2750">Houston North - TX</option>
+								<option value="Huntsville - AL" data-auto="850" data-moto="600" data-klaipeda="750" data-minsk="2675">Huntsville - AL</option>
+								<option value="Indianapolis - IN" data-auto="700" data-moto="450" data-klaipeda="975" data-minsk="2875">Indianapolis - IN</option>
+								<option value="Ionia - MI" data-auto="825" data-moto="500" data-klaipeda="955" data-minsk="2875">Ionia - MI</option>
+								<option value="Jackson - MS" data-auto="825" data-moto="550" data-klaipeda="750" data-minsk="2675">Jackson - MS</option>
+								<option value="Jacksonville - FL" data-auto="675" data-moto="425" data-klaipeda="840" data-minsk="2675">Jacksonville - FL</option>
+								<option value="Jacksonville East - FL" data-auto="675" data-moto="425" data-klaipeda="840" data-minsk="2675">Jacksonville East - FL</option>
+								<option value="Jacksonville West - FL" data-auto="675" data-moto="425" data-klaipeda="840" data-minsk="2675">Jacksonville West - FL</option>
+								<option value="Kansas City - KS" data-auto="1000" data-moto="600" data-klaipeda="900" data-minsk="2675">Kansas City - KS</option>
+								<option value="Kincheloe - MI" data-auto="1200" data-moto="890" data-klaipeda="0" data-minsk="2875">Kincheloe - MI</option>
+								<option value="Knoxville - TN" data-auto="850" data-moto="600" data-klaipeda="750" data-minsk="2675">Knoxville - TN</option>
+								<option value="Lafayette - LA" data-auto="725" data-moto="475" data-klaipeda="865" data-minsk="2750">Lafayette - LA</option>
+								<option value="Lansing - MI" data-auto="825" data-moto="500" data-klaipeda="950" data-minsk="2875">Lansing - MI</option>
+								<option value="Las Vegas - NV" data-auto="750" data-moto="700" data-klaipeda="950" data-minsk="3350">Las Vegas - NV</option>
+								<option value="Laurel - MD" data-auto="725" data-moto="475" data-klaipeda="725" data-minsk="2775">Laurel - MD</option>
+								<option value="Lexington East - KY" data-auto="875" data-moto="525" data-klaipeda="825" data-minsk="2900">Lexington East - KY</option>
+								<option value="Lexington SC" data-auto="750" data-moto="500" data-klaipeda="0" data-minsk="2675">Lexington SC</option>
+								<option value="Lexington West - KY" data-auto="875" data-moto="525" data-klaipeda="825" data-minsk="2575">Lexington West - KY</option>
+								<option value="Lincoln - IL" data-auto="750" data-moto="450" data-klaipeda="975" data-minsk="2875">Lincoln - IL</option>
+								<option value="Lincoln - NE" data-auto="900" data-moto="525" data-klaipeda="925" data-minsk="2875">Lincoln - NE</option>
+								<option value="Little Rock - AR" data-auto="900" data-moto="600" data-klaipeda="800" data-minsk="2750">Little Rock - AR</option>
+								<option value="Long Beach - CA" data-auto="580" data-moto="580" data-klaipeda="950" data-minsk="3350">Long Beach - CA</option>
+								<option value="Long Island - NY" data-auto="700" data-moto="440" data-klaipeda="775" data-minsk="2675">Long Island - NY</option>
+								<option value="Longview - TX" data-auto="725" data-moto="450" data-klaipeda="775" data-minsk="2750">Longview - TX</option>
+								<option value="Los Angeles - CA" data-auto="600" data-moto="600" data-klaipeda="950" data-minsk="3350">Los Angeles - CA</option>
+								<option value="Louisville - KY" data-auto="875" data-moto="530" data-klaipeda="825" data-minsk="2875">Louisville - KY</option>
+								<option value="Lubbock - TX" data-auto="900" data-moto="600" data-klaipeda="825" data-minsk="2750">Lubbock - TX</option>
+								<option value="Lufkin - TX" data-auto="725" data-moto="450" data-klaipeda="800" data-minsk="2750">Lufkin - TX</option>
+								<option value="Lumberton-NC" data-auto="725" data-moto="475" data-klaipeda="0" data-minsk="2675">Lumberton-NC</option>
+								<option value="Lyman, ME" data-auto="875" data-moto="600" data-klaipeda="600" data-minsk="2675">Lyman, ME</option>
+								<option value="Macon - GA" data-auto="700" data-moto="425" data-klaipeda="750" data-minsk="2675">Macon - GA</option>
+								<option value="Madison -WI" data-auto="750" data-moto="480" data-klaipeda="975" data-minsk="2875">Madison -WI</option>
+								<option value="Manchester - NH" data-auto="800" data-moto="525" data-klaipeda="725" data-minsk="2675">Manchester - NH</option>
+								<option value="Martinez - CA" data-auto="850" data-moto="750" data-klaipeda="975" data-minsk="3350">Martinez - CA</option>
+								<option value="Mcallen - TX" data-auto="800" data-moto="530" data-klaipeda="750" data-minsk="2750">Mcallen - TX</option>
+								<option value="Mebane - NC" data-auto="725" data-moto="475" data-klaipeda="775" data-minsk="2675">Mebane - NC</option>
+								<option value="Memphis - TN" data-auto="900" data-moto="625" data-klaipeda="800" data-minsk="2675">Memphis - TN</option>
+								<option value="MENTONE - CA" data-auto="800" data-moto="750" data-klaipeda="700" data-minsk="3200">MENTONE - CA</option>
+								<option value="Metro DC - MD" data-auto="725" data-moto="475" data-klaipeda="650" data-minsk="2675">Metro DC - MD</option>
+								<option value="Miami - FL" data-auto="800" data-moto="440" data-klaipeda="800" data-minsk="2675">Miami - FL</option>
+								<option value="Miami Central - FL" data-auto="800" data-moto="440" data-klaipeda="800" data-minsk="2675">Miami Central - FL</option>
+								<option value="Miami North - FL" data-auto="800" data-moto="440" data-klaipeda="800" data-minsk="2675">Miami North - FL</option>
+								<option value="Miami South - FL" data-auto="800" data-moto="440" data-klaipeda="800" data-minsk="2675">Miami South - FL</option>
+								<option value="Middletown" data-auto="725" data-moto="440" data-klaipeda="0" data-minsk="2675">Middletown</option>
+								<option value="Milwaukee - WI" data-auto="1085" data-moto="425" data-klaipeda="975" data-minsk="2465">Milwaukee - WI</option>
+								<option value="Minneapolis - MN" data-auto="850" data-moto="550" data-klaipeda="900" data-minsk="2875">Minneapolis - MN</option>
+								<option value="Minneapolis / St. Paul - MN" data-auto="850" data-moto="650" data-klaipeda="900" data-minsk="2875">Minneapolis / St. Paul - MN</option>
+								<option value="Minneapolis North - MN" data-auto="850" data-moto="650" data-klaipeda="900" data-minsk="2875">Minneapolis North - MN</option>
+								<option value="Missoula - MT" data-auto="1050" data-moto="1125" data-klaipeda="1100" data-minsk="3700">Missoula - MT</option>
+								<option value="Mobile - AL" data-auto="850" data-moto="600" data-klaipeda="750" data-minsk="2675">Mobile - AL</option>
+								<option value="Mocksville - NC" data-auto="725" data-moto="475" data-klaipeda="775" data-minsk="2675">Mocksville - NC</option>
+								<option value="Montgomery - AL" data-auto="850" data-moto="525" data-klaipeda="725" data-minsk="2675">Montgomery - AL</option>
+								<option value="Montreal-QC" data-auto="850" data-moto="600" data-klaipeda="700" data-minsk="3100">Montreal-QC</option>
+								<option value="Nashville - TN" data-auto="850" data-moto="575" data-klaipeda="750" data-minsk="2675">Nashville - TN</option>
+								<option value="New Castle - DE" data-auto="700" data-moto="475" data-klaipeda="690" data-minsk="2600">New Castle - DE</option>
+								<option value="New Orleans - LA" data-auto="775" data-moto="500" data-klaipeda="775" data-minsk="2750">New Orleans - LA</option>
+								<option value="New Orleans East - LA" data-auto="865" data-moto="500" data-klaipeda="775" data-minsk="2750">New Orleans East - LA</option>
+								<option value="Newburgh - NY" data-auto="675" data-moto="450" data-klaipeda="700" data-minsk="2675">Newburgh - NY</option>
+								<option value="North Boston - MA" data-auto="825" data-moto="500" data-klaipeda="725" data-minsk="2675">North Boston - MA</option>
+								<option value="North Charleston" data-auto="725" data-moto="450" data-klaipeda="0" data-minsk="2675">North Charleston</option>
+								<option value="North Hollywood - CA" data-auto="630" data-moto="630" data-klaipeda="950" data-minsk="3350">North Hollywood - CA</option>
+								<option value="North Seattle - WA" data-auto="625" data-moto="575" data-klaipeda="1150" data-minsk="3700">North Seattle - WA</option>
+								<option value="Northern New Jersey - NJ" data-auto="610" data-moto="390" data-klaipeda="740" data-minsk="2675">Northern New Jersey - NJ</option>
+								<option value="Northern Virginia - VA" data-auto="725" data-moto="450" data-klaipeda="775" data-minsk="2675">Northern Virginia - VA</option>
+								<option value="Ocala - FL" data-auto="725" data-moto="500" data-klaipeda="750" data-minsk="2675">Ocala - FL</option>
+								<option value="Ogden - UT" data-auto="1000" data-moto="950" data-klaipeda="900" data-minsk="3350">Ogden - UT</option>
+								<option value="Oklahoma City - OK" data-auto="850" data-moto="550" data-klaipeda="800" data-minsk="2750">Oklahoma City - OK</option>
+								<option value="Omaha - NE" data-auto="900" data-moto="550" data-klaipeda="925" data-minsk="2875">Omaha - NE</option>
+								<option value="Orlando - FL" data-auto="700" data-moto="450" data-klaipeda="775" data-minsk="2675">Orlando - FL</option>
+								<option value="Orlando North - FL" data-auto="700" data-moto="450" data-klaipeda="775" data-minsk="2675">Orlando North - FL</option>
+								<option value="Orlando South-Fl" data-auto="700" data-moto="450" data-klaipeda="0" data-minsk="2675">Orlando South-Fl</option>
+								<option value="Ottawa" data-auto="1475" data-moto="975" data-klaipeda="0" data-minsk="2750">Ottawa</option>
+								<option value="Paducah - KY" data-auto="925" data-moto="680" data-klaipeda="875" data-minsk="2875">Paducah - KY</option>
+								<option value="Pasco - WA" data-auto="800" data-moto="550" data-klaipeda="1250" data-minsk="3730">Pasco - WA</option>
+								<option value="Pensacola - FL" data-auto="825" data-moto="460" data-klaipeda="675" data-minsk="2675">Pensacola - FL</option>
+								<option value="Peoria - IL" data-auto="750" data-moto="450" data-klaipeda="975" data-minsk="2875">Peoria - IL</option>
+								<option value="Permian Basin - TX" data-auto="900" data-moto="600" data-klaipeda="750" data-minsk="2750">Permian Basin - TX</option>
+								<option value="Philadelphia - PA" data-auto="520" data-moto="240" data-klaipeda="700" data-minsk="2675">Philadelphia - PA</option>
+								<option value="Philadelphia East" data-auto="670" data-moto="390" data-klaipeda="0" data-minsk="2675">Philadelphia East</option>
+								<option value="Philadelphia East- Sublot PA" data-auto="670" data-moto="390" data-klaipeda="0" data-minsk="2675">Philadelphia East- Sublot PA</option>
+								<option value="Phoenix - AZ" data-auto="800" data-moto="700" data-klaipeda="1000" data-minsk="3350">Phoenix - AZ</option>
+								<option value="Pittsburgh - PA" data-auto="850" data-moto="575" data-klaipeda="700" data-minsk="2675">Pittsburgh - PA</option>
+								<option value="Pittsburgh East - PA" data-auto="900" data-moto="575" data-klaipeda="700" data-minsk="2675">Pittsburgh East - PA</option>
+								<option value="Pittsburgh North - PA" data-auto="900" data-moto="575" data-klaipeda="700" data-minsk="2675">Pittsburgh North - PA</option>
+								<option value="Pittsburgh South - PA" data-auto="900" data-moto="575" data-klaipeda="700" data-minsk="2675">Pittsburgh South - PA</option>
+								<option value="Portage -WI" data-auto="750" data-moto="450" data-klaipeda="975" data-minsk="2875">Portage -WI</option>
+								<option value="Portland - OR" data-auto="675" data-moto="675" data-klaipeda="1250" data-minsk="3700">Portland - OR</option>
+								<option value="Portland North - OR" data-auto="700" data-moto="810" data-klaipeda="1250" data-minsk="3700">Portland North - OR</option>
+								<option value="Portland South - Woodburn - OR" data-auto="700" data-moto="810" data-klaipeda="1250" data-minsk="3700">Portland South - Woodburn - OR</option>
+								<option value="Portland-Gorham - ME" data-auto="875" data-moto="600" data-klaipeda="700" data-minsk="2675">Portland-Gorham - ME</option>
+								<option value="Providence - RI" data-auto="800" data-moto="500" data-klaipeda="775" data-minsk="2675">Providence - RI</option>
+								<option value="Pulaski - VA" data-auto="825" data-moto="625" data-klaipeda="750" data-minsk="2675">Pulaski - VA</option>
+								<option value="Punta Gorda - FL" data-auto="750" data-moto="480" data-klaipeda="800" data-minsk="2675">Punta Gorda - FL</option>
+								<option value="Puyallup" data-auto="575" data-moto="800" data-klaipeda="0" data-minsk="3700">Puyallup</option>
+								<option value="Quebec" data-auto="1000" data-moto="800" data-klaipeda="0" data-minsk="2750">Quebec</option>
+								<option value="Raleigh - NC" data-auto="725" data-moto="475" data-klaipeda="745" data-minsk="2675">Raleigh - NC</option>
+								<option value="Rancho Cucamonga - CA" data-auto="630" data-moto="630" data-klaipeda="950" data-minsk="3350">Rancho Cucamonga - CA</option>
+								<option value="Reno - NV" data-auto="1000" data-moto="850" data-klaipeda="975" data-minsk="3350">Reno - NV</option>
+								<option value="Richmond - VA" data-auto="800" data-moto="510" data-klaipeda="800" data-minsk="2675">Richmond - VA</option>
+								<option value="Richmond East - VA" data-auto="800" data-moto="510" data-klaipeda="800" data-minsk="2675">Richmond East - VA</option>
+								<option value="Riverside" data-auto="630" data-moto="600" data-klaipeda="0" data-minsk="3350">Riverside</option>
+								<option value="Roanoke" data-auto="875" data-moto="550" data-klaipeda="0" data-minsk="2675">Roanoke</option>
+								<option value="Rochester - NY" data-auto="900" data-moto="650" data-klaipeda="650" data-minsk="2675">Rochester - NY</option>
+								<option value="Rosedale" data-auto="725" data-moto="525" data-klaipeda="0" data-minsk="2675">Rosedale</option>
+								<option value="Rutland - VA" data-auto="850" data-moto="500" data-klaipeda="850" data-minsk="2700">Rutland - VA</option>
+								<option value="Sacramento - CA" data-auto="850" data-moto="750" data-klaipeda="950" data-minsk="3350">Sacramento - CA</option>
+								<option value="Salisbury" data-auto="750" data-moto="475" data-klaipeda="0" data-minsk="2675">Salisbury</option>
+								<option value="Salt Lake City - UT" data-auto="1100" data-moto="1000" data-klaipeda="925" data-minsk="3350">Salt Lake City - UT</option>
+								<option value="San Antonio - TX" data-auto="750" data-moto="450" data-klaipeda="825" data-minsk="2750">San Antonio - TX</option>
+								<option value="San Antonio South - TX" data-auto="750" data-moto="450" data-klaipeda="825" data-minsk="2750">San Antonio South - TX</option>
+								<option value="San Bernardino - CA" data-auto="650" data-moto="650" data-klaipeda="950" data-minsk="3350">San Bernardino - CA</option>
+								<option value="San Diego - CA" data-auto="650" data-moto="600" data-klaipeda="1050" data-minsk="3350">San Diego - CA</option>
+								<option value="San Jose - CA" data-auto="850" data-moto="750" data-klaipeda="975" data-minsk="3350">San Jose - CA</option>
+								<option value="Sarasota" data-auto="700" data-moto="415" data-klaipeda="0" data-minsk="2675">Sarasota</option>
+								<option value="Savannah - GA" data-auto="550" data-moto="350" data-klaipeda="800" data-minsk="2675">Savannah - GA</option>
+								<option value="Sayreville (NJ)" data-auto="700" data-moto="475" data-klaipeda="0" data-minsk="2600">Sayreville (NJ)</option>
+								<option value="Scranton - PA" data-auto="700" data-moto="425" data-klaipeda="775" data-minsk="2675">Scranton - PA</option>
+								<option value="SeaFord DE" data-auto="775" data-moto="500" data-klaipeda="0" data-minsk="2675">SeaFord DE</option>
+								<option value="Seattle - WA" data-auto="575" data-moto="850" data-klaipeda="1125" data-minsk="3700">Seattle - WA</option>
+								<option value="Seattle South - WA" data-auto="575" data-moto="850" data-klaipeda="1125" data-minsk="3700">Seattle South - WA</option>
+								<option value="Shady Springs - WV" data-auto="1025" data-moto="700" data-klaipeda="850" data-minsk="2675">Shady Springs - WV</option>
+								<option value="Shreverport - LA" data-auto="765" data-moto="505" data-klaipeda="750" data-minsk="2750">Shreverport - LA</option>
+								<option value="Sikeston - MO" data-auto="875" data-moto="510" data-klaipeda="825" data-minsk="2875">Sikeston - MO</option>
+								<option value="Sioux Falls - SD" data-auto="1000" data-moto="800" data-klaipeda="825" data-minsk="2875">Sioux Falls - SD</option>
+								<option value="Somerville - NJ" data-auto="610" data-moto="360" data-klaipeda="675" data-minsk="2675">Somerville - NJ</option>
+								<option value="South Bend - IN" data-auto="700" data-moto="400" data-klaipeda="975" data-minsk="2875">South Bend - IN</option>
+								<option value="South Boston - MA" data-auto="825" data-moto="500" data-klaipeda="725" data-minsk="2675">South Boston - MA</option>
+								<option value="South Sacramento - CA" data-auto="700" data-moto="550" data-klaipeda="950" data-minsk="3350">South Sacramento - CA</option>
+								<option value="Southern Illinois - IL" data-auto="925" data-moto="610" data-klaipeda="800" data-minsk="2675">Southern Illinois - IL</option>
+								<option value="Southern New Jersey - NJ" data-auto="650" data-moto="415" data-klaipeda="750" data-minsk="2675">Southern New Jersey - NJ</option>
+								<option value="Spartanburg - SC" data-auto="725" data-moto="450" data-klaipeda="750" data-minsk="2675">Spartanburg - SC</option>
+								<option value="Spokane - WA" data-auto="800" data-moto="850" data-klaipeda="1250" data-minsk="3700">Spokane - WA</option>
+								<option value="Springfield - MO" data-auto="1000" data-moto="610" data-klaipeda="875" data-minsk="2675">Springfield - MO</option>
+								<option value="St Johns" data-auto="1770" data-moto="1550" data-klaipeda="0" data-minsk="2750">St Johns</option>
+								<option value="St. Cloud - MN" data-auto="850" data-moto="600" data-klaipeda="950" data-minsk="2875">St. Cloud - MN</option>
+								<option value="St. Louis - IL" data-auto="925" data-moto="610" data-klaipeda="975" data-minsk="2675">St. Louis - IL</option>
+								<option value="St. Louis - MO" data-auto="925" data-moto="610" data-klaipeda="975" data-minsk="2675">St. Louis - MO</option>
+								<option value="Suffolk - VA" data-auto="800" data-moto="510" data-klaipeda="800" data-minsk="2675">Suffolk - VA</option>
+								<option value="Sun Valley - CA" data-auto="630" data-moto="600" data-klaipeda="950" data-minsk="3350">Sun Valley - CA</option>
+								<option value="Syracuse - NY" data-auto="775" data-moto="525" data-klaipeda="700" data-minsk="2675">Syracuse - NY</option>
+								<option value="Tallahassee - FL" data-auto="725" data-moto="525" data-klaipeda="775" data-minsk="2675">Tallahassee - FL</option>
+								<option value="Tampa - FL" data-auto="725" data-moto="460" data-klaipeda="800" data-minsk="2675">Tampa - FL</option>
+								<option value="Tampa South - FL" data-auto="725" data-moto="460" data-klaipeda="800" data-minsk="2675">Tampa South - FL</option>
+								<option value="Tanner - AL" data-auto="875" data-moto="600" data-klaipeda="700" data-minsk="2675">Tanner - AL</option>
+								<option value="Taunton - MA" data-auto="825" data-moto="500" data-klaipeda="675" data-minsk="2675">Taunton - MA</option>
+								<option value="Templeton" data-auto="825" data-moto="580" data-klaipeda="695" data-minsk="2675">Templeton</option>
+								<option value="Tidewater - VA" data-auto="750" data-moto="480" data-klaipeda="800" data-minsk="2675">Tidewater - VA</option>
+								<option value="Tifton - GA" data-auto="700" data-moto="425" data-klaipeda="750" data-minsk="2675">Tifton - GA</option>
+								<option value="Toronto" data-auto="975" data-moto="775" data-klaipeda="0" data-minsk="3350">Toronto</option>
+								<option value="Trenton - NJ" data-auto="650" data-moto="360" data-klaipeda="750" data-minsk="2675">Trenton - NJ</option>
+								<option value="Tucson - AZ" data-auto="850" data-moto="750" data-klaipeda="975" data-minsk="3350">Tucson - AZ</option>
+								<option value="Tulsa - OK" data-auto="925" data-moto="625" data-klaipeda="775" data-minsk="2750">Tulsa - OK</option>
+								<option value="Vallejo - CA" data-auto="850" data-moto="750" data-klaipeda="950" data-minsk="3350">Vallejo - CA</option>
+								<option value="Van Nuys - CA" data-auto="630" data-moto="630" data-klaipeda="950" data-minsk="3350">Van Nuys - CA</option>
+								<option value="Vancouver" data-auto="2700" data-moto="2500" data-klaipeda="0" data-minsk="3050">Vancouver</option>
+								<option value="WACO - TX" data-auto="775" data-moto="500" data-klaipeda="825" data-minsk="2750">WACO - TX</option>
+								<option value="Walton - KY" data-auto="875" data-moto="525" data-klaipeda="825" data-minsk="2875">Walton - KY</option>
+								<option value="Washington DC" data-auto="725" data-moto="475" data-klaipeda="775" data-minsk="2675">Washington DC</option>
+								<option value="WAYLAND - MI" data-auto="1150" data-moto="475" data-klaipeda="700" data-minsk="2675">WAYLAND - MI</option>
+								<option value="Webster" data-auto="850" data-moto="550" data-klaipeda="0" data-minsk="2675">Webster</option>
+								<option value="West Palm Beach - FL" data-auto="800" data-moto="460" data-klaipeda="800" data-minsk="2675">West Palm Beach - FL</option>
+								<option value="West Warren - MA" data-auto="825" data-moto="500" data-klaipeda="725" data-minsk="2675">West Warren - MA</option>
+								<option value="Western Colorado - CO" data-auto="1300" data-moto="950" data-klaipeda="900" data-minsk="3350">Western Colorado - CO</option>
+								<option value="Wheeling - IL" data-auto="800" data-moto="380" data-klaipeda="725" data-minsk="2650">Wheeling - IL</option>
+								<option value="Wichita - KS" data-auto="1000" data-moto="700" data-klaipeda="800" data-minsk="2750">Wichita - KS</option>
+								<option value="Wilmington - NC" data-auto="800" data-moto="525" data-klaipeda="675" data-minsk="2675">Wilmington - NC</option>
+								<option value="York Haven - PA" data-auto="725" data-moto="475" data-klaipeda="750" data-minsk="2675">York Haven - PA</option>
+								<option value="York Springs - PA" data-auto="725" data-moto="475" data-klaipeda="700" data-minsk="2675">York Springs - PA</option>
+							</select>
+						</label>
+						<label> Стоимость авто ($):
+							<input type="number" placeholder="10000" name="calc_price" id="calc_price" value="3000"> </label>
+						<label> Выбор акциона:
+							<select name="calc_auction" id="calc_auction">
+								<option value="copart">Copart</option>
+								<option value="iaai">IaaI</option>
+							</select>
+						</label>
+					</div>
+					<div class="form">
+						<h3>Таможня и оформление</h3></div>
+					<div class="form">
+						<label> Объем двигателя (см. куб.):
+							<input type="number" placeholder="1000" name="calc_volume" id="calc_volume" value="1000"> </label>
+						<label> Электромобиль:
+							<select name="calc_engine" id="calc_engine">
+								<option value="1">Нет</option>
+								<option value="0">Да</option>
+							</select>
+						</label>
+						<label> Возраст авто:
+							<select name="calc_age" id="calc_age">
+								<option value="1" data-recycling="544">3 года и менее</option>
+								<option value="2" data-recycling="1089">от 3-х до 5-ти лет</option>
+								<option value="3" data-recycling="1089">более 5 лет</option>
+							</select>
+						</label>
+						<label> Вид растаможки:
+							<select name="calc_clearance" id="calc_clearance">
+								<option value="1">Полная</option>
+								<option value="0.5">Льготная</option>
+							</select>
+						</label>
+					</div>
+					<div class="form">
+						<label> Услуги компании:
+							<select name="calc_service" id="calc_service">
+								<option data-type="auto" data-price="700">Самостоятельный подбор авто</option>
+								<option data-type="moto" data-price="800">Подбор с помощью компании Carsusa</option>
+							</select>
+						</label>
+						<button type="submit" class="button button-red-gradient">Рассчитать</button>
+					</div>
+				</div>
+				<div class="calculator__body calculator__body-costs" style="">
+					<div class="row">
+						<div class="col-lg-6">
+							<h3>Покупка и доставка</h3>
+							<table>
+								<tbody>
+									<tr>
+										<td>Стоимость покупки:</td>
+										<td><span class="costs-auto">3 000</span> $</td>
+									</tr>
+									<tr>
+										<td>Аукционный сбор*:</td>
+										<td><span class="costs-auction">593</span> $ <span class="costs-iaai small"></span></td>
+									</tr>
+									<tr>
+										<td colspan="2"><span class="small">* Это только предварительная оценка, а не окончательная стоимость.</span></td>
+									</tr>
+									<tr style="display:none;">
+										<td>Транспортировка в порт США:</td>
+										<td><span id="delivery">800</span> $</td>
+									</tr>
+									<tr style="display:none;">
+										<td>Доставка от порта до Минска:</td>
+										<td><span id="final">2750</span> $</td>
+									</tr>
+									<tr>
+										<td>Доставка от аукциона США (через Литву) до Минска:</td>
+										<td><span id="total">3600</span> $</td>
+									</tr>
+									<tr>
+										<td>Доставка от аукциона США (через Грузию) до Минска:</td>
+										<td><span id="total1">5400</span> $</td>
+									</tr>
+									<tr>
+										<td colspan="2"><span class="small">* Указанные цены на доставку актуальны на момент расчета<br> и могут быть изменены во время перевозки</span>.</td>
+									</tr>
+									<tr>
+										<td colspan="2"><span class="small">*У нас нет доплат "за электромобиль", <br>"за гибрид", "за джип" или "за загрузку 1/3 <br>в контейнере до Минска", у нас одна общая цена за доставку!</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-lg-6">
+							<h3>Растаможка и оформление</h3>
+							<table>
+								<tbody>
+									<tr>
+										<td>Таможенная пошлина:</td>
+										<td><span class="customs-result">2500</span> €</td>
+									</tr>
+									<tr>
+										<td colspan="2"><span class="small">* Таможня для электромобилей: без права продажи - тогда таможня 0 BYN, <br>если машина на продажу - тогда 15% от стоимости.</span></td>
+									</tr>
+									<tr>
+										<td>Таможенный сбор за таможенное оформление:</td>
+										<td><span class="costs-customs">120</span> BYN</td>
+									</tr>
+									<tr>
+										<td>Утилизационный сбор:</td>
+										<td><span class="costs-recycling">544</span> BYN</td>
+									</tr>
+									<tr>
+										<td>Услуги декларанта, выгрузка авто из контейнера, размещение на СВХ, оформление документов:</td>
+										<td><span class="customs-declarant">430</span> BYN</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-lg-6">
+							<table>
+								<tbody>
+									<tr>
+										<td>Стоимость наших услуг:</td>
+										<td><span class="costs-service">700</span> BYN</td>
+									</tr>
+									<tr>
+										<th>Итого (через Литву):</th>
+										<th><span class="costs-total">10822</span> $</th>
+									</tr>
+									<tr>
+										<th>Итого (через Грузию):</th>
+										<th><span class="costs-total1">12622</span> $</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
