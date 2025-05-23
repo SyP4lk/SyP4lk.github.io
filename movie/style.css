@@ -30,9 +30,7 @@
                 --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
             }
 
-            *,*:before,*:after {
-                box-sizing: border-box
-            }
+            
 
             @font-face {
                     font-family: 'HelveticaBold';
@@ -158,30 +156,30 @@
                 width: 100%;
                 padding-right: 15px;
                 padding-left: 15px;
-                margin: 0;
+                margin: 0 auto;
             }
 
             @media (min-width: 576px) {
                 .container {
-                    max-width:576px
+                    max-width:540px
                 }
             }
 
             @media (min-width: 768px) {
                 .container {
-                    max-width:768px
+                    max-width:720px
                 }
             }
 
             @media (min-width: 992px) {
                 .container {
-                    max-width:992px
+                    max-width:960px
                 }
             }
 
             @media (min-width: 1200px) {
                 .container {
-                    max-width:1200px
+                    max-width:1170px
                 }
             }
 
@@ -418,10 +416,7 @@
             }
 
             @media print {
-                *,*:before,*:after {
-                    text-shadow: none !important;
-                    box-shadow: none !important
-                }
+                
 
                 tr {
                     page-break-inside: avoid
@@ -840,10 +835,7 @@
                     font-size: 20px
                 }
 
-                section.customs-calculator:before {
-                    font-size: 38px;
-                    top: 38px
-                }
+                
 
                 section.customs-calculator .calculator__body {
                     padding: 20px
@@ -971,12 +963,7 @@
                 font-style: normal
             }
 
-            .has-drop-cap:not(:focus):after {
-                content: "";
-                display: table;
-                clear: both;
-                padding-top: 14px
-            }
+            
 
             @supports (position: sticky) {
             }

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	
 	 var copart = [{
                 from: 0.01,
                 to: 49.99,
